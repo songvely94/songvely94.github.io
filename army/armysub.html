@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>대한민국 육군</title>
+        <!--google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+        <!--style-->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/armysub.css">
+        <link rel="stylesheet" href="css/armycommon.css">
+
+        <!-- favicon -->
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+
+        <!--script-->
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="js/armysub.js"></script>
+    </head>
+    <body>
+        <header id="header">
+            <!-- *** width: 1200px; -->
+            <div id="first-line" class="clearfix">
+                <div id="header-logo">
+                    <a href="#army-logo">
+                        <img src="images/header_armylogo.png" alt="육군 로고">
+                    </a>
+                </div><!-- // #header-logo-->
+                <div id="header-search">
+                    <form action="/" method="post" id="search-box">
+                        <input type="text" name="search" placeholder="검색어를 입력해주세요." autocomplete="off">
+                        <button id="searchImg"><span>검색 버튼</span></button> <!-- *** 검색 버튼 background로 삽입 -->
+                    </form>
+                </div>
+                <!--// #header-search -->
+                <div id="header-social" class="clearfix">
+                    <span id="english"><a href="#english">ENGLISH</a></span> <!-- *** 다시 열리는 창인가...? -->
+                    <ul id="head-sns">
+                        <li class="social-media">
+                            <a href="#blog">
+                                <img src="images/header_blog.png" alt="육군 블로그 아미누리 바로가기">
+                                <img src="images/header_blog_hover.png" alt="육군 블로그 아미누리 바로가기">
+                                <!-- *** defalut=display: none; hover 시 display: block; -->
+                            </a>
+                        </li>
+                        <li class="social-media">
+                            <a href="#youtube">
+                                <img src="images/header_youtube.png" alt="육군 유투브 바로가기">
+                                <img src="images/header_youtube_hover.png" alt="육군 유투브 바로가기">
+                                <!-- *** defalut=display: none; hover 시 display: block; -->
+                            </a>
+                        </li>
+                        <li class="social-media">
+                            <a href="facebook">
+                                <img src="images/header_facebook.png" alt="육군 페이스북 바로가기">
+                                <img src="images/header_facebook_hover.png" alt="육군 페이스북 바로가기">
+                                <!-- *** defalut=display: none; hover 시 display: block; -->
+                            </a>
+                        </li>
+                        <li class="social-media">
+                            <a href="instar">
+                                <img src="images/header_instar.png" alt="육군 인스타 바로가기">
+                                <img src="images/header_instar_hover.png" alt="육군 인스타 바로가기">
+                                <!-- *** defalut=display: none; hover 시 display: block; -->
+                            </a>
+                        </li>
+                    </ul>
+                </div> <!-- // #header-social -->
+            </div> <!-- // #first-line -->
+    
+            <nav id="nav">
+                <ul id="mainmenu" class="clearfix">
+                    <li><a href="#army-intro">육군소개</a></li>
+                    <li><a href="#army-news">육군소식</a></li>
+                    <li><a href="#complaints">민원마당</a></li>
+                    <li><a href="#nation">국민마당</a></li>
+                    <li><a href="#information">정보마당</a></li>
+                    <li><a href="#reference">자료실</a></li>
+                </ul><!-- // #mainmenu -->
+    
+                <div id="subwrap" class="clearfix">
+                    <div id="submenu">
+                        <div class="sublist clearfix">
+                            <h2>육군소개</h2>
+                            <ul class="sub-item">
+                                <li><a href="#">참모총장</a></li>
+                                <li><a href="#">목표 및 조직</a></li>
+                                <li><a href="#">육군연혁</a></li>
+                                <li><a href="#">육군정책방향</a></li>
+                                <li><a href="#">육군가</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="sublist clearfix">
+                            <h2>육군소식</h2>
+                            <ul class="sub-item">
+                                <li><a href="#">육군뉴스</a></li>
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">육군지</a></li>
+                                <li><a href="#">사진으로보는 육군</a></li>
+                                <li><a href="#">군사 연구지</a></li>
+                                <li><a href="#">해외파병</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="sublist clearfix">
+                            <h2>민원마당</h2>
+                            <ul class="sub-item">
+                                <li><a href="#">민원안내</a></li>
+                                <li><a href="#">민원신청</a></li>
+                                <li><a href="#">친절/불친절 신고</a></li>
+                                <li><a href="#">군경력증명서 발급</a></li>
+                                <li><a href="#">육군검찰단 안내</a></li>
+                                <li><a href="#">국가배상절차 소개</a></li>
+                                <li><a href="#">건설기술 경력확인 발급</a></li>
+                                <li><a href="#">찾아오시는 길</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="sublist clearfix">
+                            <h2>국민마당</h2>
+                            <ul class="sub-item">
+                                <li><a href="#">신병부대배치조회</a></li>
+                                <li><a href="#">무공훈장 찾기</a></li>
+                                <li><a href="#">전사·순직 군인 유가족 찾기</a></li>
+                                <li><a href="#">위국헌신 전우사랑 기금</a></li>
+                                <li><a href="#">공공데이터 개방</a></li>
+                                <li><a href="#">칭찬합시다</a></li>
+                                <li><a href="#">계룡대안보견학</a></li>
+                                <li><a href="#">명예의 전당</a></li>
+                                <li><a href="#">육군통합신고센터</a></li>
+                                <li><a href="#">신병 사진보기</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="sublist clearfix">
+                            <h2>정보마당</h2>
+                            <ul class="sub-item">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">입영장정의 슬기로운 군생활</a></li>
+                                <li><a href="#">예비역광장</a></li>
+                                <li><a href="#">M&S 국제학술대회</a></li>
+                                <li><a href="#">전력지원체계</a></li>
+                                <li><a href="#">전사자 유해발굴</a></li>
+                                <li><a href="#">지상군페스티벌</a></li>
+                                <li><a href="#">호국미술대전</a></li>
+                                <li><a href="#">국외교환교관전용방</a></li>
+                                <li><a href="#">육군 休드림</a></li>
+                                <li><a href="#">정보공개</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="sublist clearfix">
+                            <h2>자료실</h2>
+                            <ul class="sub-item">
+                                <li><a href="#">육군 전용서체</a></li>
+                                <li><a href="#">육군복장/계급</a></li>
+                                <li><a href="#">육군 이모티콘</a></li>
+                                <li><a href="#">전공사망자 처리규정</a></li>
+                                <li><a href="#">육군개인정보처리방침</a></li>
+                            </ul>
+                        </div>
+    
+                    </div> <!-- // #submenu-->
+    
+                </div> <!-- // #subwrap-->
+            </nav> <!-- // #nav -->
+        </header> <!-- // #header -->
+
+        <section id="bg-wrap" class="clearfix">
+            <div id="content-wrap">
+                <div>
+                    <img src="./images/sub_content001_bg.jpg" alt="신병 부대배치 조회 배경 사진">
+                </div>
+    
+                <aside id="sidebar">
+                    <h2>국민마당</h2>
+                    <ul id="side-menu">
+                        <li><a href="#">무공훈장 찾기</a></li>
+                        <li><a href="#">전사·순직 군인 유가족 찾기</a></li>
+                        <li><a href="#">위국헌신 전우사랑 기금</a></li>
+                        <li><a href="#">신병부대배치조회</a></li>
+                        <li><a href="#">공공데이터 개방</a></li>
+                        <li><a href="#">칭찬합시다</a></li>
+                        <li><a href="#">계룡대안보견학</a></li>
+                        <li><a href="#">명예의 전당</a></li>
+                        <li><a href="#">육군통합신고센터</a></li>
+                        <li><a href="#">신병 사진보기</a></li>
+                    </ul>
+                </aside>
+    
+                <article id="content">
+                    <div id="cont1">
+                        <h3>신병부대배치조회</h3>
+                        <p>HOME > 국민마당 > 신병자대배치조회</p>
+                    </div> <!-- // #cont1 -->
+    
+                    <div id="cont2">
+                        <p>
+                            각 입영부대에서는 공정한 부대분류를 위하여 <span class="colorblue">분류대상 훈련병</span> 및 
+                            입회관<span class="colorblue">(감찰, 군사경찰)</span>이 참석한 가운데 
+                            <span class="colorred">컴퓨터에 의한 전산분류</span>를 시행하고 있습니다.
+                        </p>
+                    </div> <!-- // #cont2 -->
+    
+                    <div id="cont3">
+                        <h6>부대배치 조회</h6>
+    
+                        <div id="lookup">
+                            <form action="/" method="post" id="lookupform" autocomplete="off">
+                                <label for="userId">
+                                    <span>성<span class="secret">명성</span>명</span>
+                                    <input type="text" name="userId" id="userId">
+                                </label>
+    
+                                <label for="userBirth">
+                                    <span>생년월일</span>
+                                    <input type="text" name="userBirth" id="userBirth">
+                                </label>
+    
+                                <label for="enlistDay">
+                                    <span>입대일자</span>
+                                    <input type="date" required pattern="\d{4}-\d{2}-\d{2}" name="enlistDay" id="enlistDay">
+                                </label>
+    
+                                <label for="enlistUnit">
+                                    <span>입대부대</span>
+                                    <input type="date" required pattern="\d{4}-\d{2}-\d{2}" name="enlistUnit" id="enlistUnit">                            
+                                </label>
+                                
+                                <input type="submit" value="검색">
+                            </form>
+                        </div>
+                    </div> <!-- // #cont3 -->
+    
+                    <div id="cont4" class="page">
+                        <h6>부대배치 안내</h6>
+    
+                        <p>
+                            육군에서는 신병부대분류 결과를 <span class="colorblue">알림서비스</span>(문자전송), 
+                            인터넷<span class="colorblue">[신병 부대배치 조회]</span>를 통하여 안내하고 있습니다. 
+                            입영부대에 따라 안내시기는 아래일정을 참고하여 주시기 바랍니다.
+                        </p>
+    
+                        <table id="table">
+                            <thead>
+                                <tr>
+                                    <th>입영 및 교육부대</th>
+                                    <th>안내시기</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>육군훈련소</th>
+                                    <td>신병교육 수료식(입영 6주차) 화요일 13시 30분</td>
+                                </tr>
+                                <tr>
+                                    <th>지상작전사령부<br>신병교육대대</th>
+                                    <td>
+                                        입영 3주차 금요일 14시<br>
+                                        (1,3,5,6,7,9,12,15,21,25,27,28,36,51,55사단)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>2작전사령부<br>신병교육대대</th>
+                                    <td>
+                                        입영 4주차 목요일 16시<br>
+                                        (31,32,35,37,39,50,53사단)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>병과학교</th>
+                                    <td>교육과정(1~2주차) 수요일 13시 30분</td>
+                                </tr>
+                                <tr>
+                                    <th>수송교육연대<br>(운전병)</th>
+                                    <td>
+                                        <ul>
+                                            <li>소형차량(2주교육) : 수료 주 수요일 13시 30분</li>
+                                            <li>중형차량(4주교육) : 수료 주 수요일 13시 30분</li>
+                                            <li>대형차량(5주교육) : 수료 주 수요일 13시 30분</li>
+                                            
+                                            <li>※ 운전병 차종(특기) 및 교육기간 편성은 수송교육연대 입교 후 결정됩니다.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+    
+                        <ul id="cont4-list" class="page">
+                            <li>
+                                <span class="colorblue">육군훈련소, 지상작전사령부, 2작전사령부</span>는 각 군 내부일정에 따라 부대분류 일정이 
+                                다소 상이함을 양지바랍니다.
+                            </li>
+                            <li>
+                                입영한 <span class="colorblue">육군훈련소, 신병교육대대</span>는 <span class="colorred">최종복무부대가 아니며</span>, 
+                                6주간 교육 및 병과학교 교육 수료 후 육군 인력 소요에 의거 전국지역으로 분류되오니 이점 양지바랍니다.
+                            </li>
+                        </ul>
+                    </div><!-- // #cont4-->
+    
+                    <div id="cont5" class="page">
+                        <ul>
+                            <li>
+                                <span>문의전화</span>
+                                <span>042 - 550 - 7305, 7306, 7366</span>
+                            </li>
+                            <li>
+                                <span>문의시간</span>
+                                <span>평일 09:00 - 16:00 / 수요일 09:00 - 14:30 / 점심시간 12:00 - 13:00</span>
+                            </li>
+                        </ul>
+                    </div><!-- // #cont5 -->
+                </article>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div id="footer-cont">
+                <!-- *** width: 1200px; -->
+                <ul id="footer-nav" class="clearfix">
+                    <li><a href="#disclosure">정보공개</a></li>
+                    <li><a href="#privacy">육군개인정보처리방침</a></li>
+                    <li><a href="#address">찾아오시는길</a></li>
+                    <li><a href="#contact">담당자연락처</a></li>
+                </ul> <!-- // #footer-nav -->
+    
+                <div id="footer-padding" class="clearfix">
+                    <div id="footer-logo">
+                        <!-- *** float: left -->
+                        <a href="#footer-logo">
+                            <img src="images/footer_armylogo.png" alt="하단 육군 로고">
+                        </a>
+                    </div> <!-- // #footer-logo -->
+    
+                    <div id="footer-txt">
+                        <!-- *** float: left -->
+                        <p>
+                            본 사이트는 상업 목적상의 활용(링크)을 금지하고 있습니다. <br>
+                            Copyright&copy;대한민국 육군.All Right Reseved. / 대표전화: 042) 550-0114 / 민원전화: 042) 551-6969
+                        </p>
+                    </div> <!-- // #footer-txt -->
+                </div>
+            </div> <!-- // #footer-cont -->
+        </footer> <!-- // #footer -->
+
+        <!-- <div class="modal">
+            <span>성명</span>란을 확인해주세요!
+        </div> -->
+    </body>
+</html>

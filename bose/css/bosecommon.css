@@ -1,0 +1,234 @@
+/*
+font-family: 'Gothic A1', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+
+color
+주조색 : #fb8500;
+보조색 : #191919;
+보조색 : #f5f3f4;
+글자색 : #191919;
+배경색 : #f5f3f4;
+*/
+@media screen and (min-width: 1200px) {
+    /* ----- all style ----- */
+    html, body { height: 100%; }
+
+    html { font-size: 62.5%; }
+
+    body {
+        font-family: 'Nanum Gothic', sans-serif;
+        color: #191919;
+        background: #f5f3f4;
+    }
+
+    .clearfix::before,
+    .clearfix::after { content:""; clear: both; display: block; }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+    }
+
+    #header-wrap, #black-header, #nav {
+        width: 90%;
+        margin: 0 auto;
+        /* background: yellowgreen; */
+    }
+    #footer-wrap { width: 80%; margin: 0 auto; }
+
+    /* 웹 접근성 향상을 위한 */
+    #ham-menu > span {
+        position: absolute;
+        display: block;
+        width: 1px; height: 1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+    }
+
+    /* 버튼 기본 스타일 제거 */
+    #ham-menu {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    /* ----- header ----- */
+    #header {
+        z-index: 100;
+        background: #f5f3f4;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+
+        padding: 1.6rem 0;
+        /* background: #ccc; */
+    }
+
+    #header-wrap { display: block; }
+
+    .header-logo, #nav, #privacy { float: left; }
+
+    .header-logo {
+        width: 15%;
+        padding-right: 1rem;
+        box-sizing: border-box;
+    }
+    .header-logo > a > img { width: 100%; display: block; }
+
+    #nav {
+        width: 70%;
+        padding: 0 10rem;
+        box-sizing: border-box;
+    }
+    #nav > ul > li {
+        float: left;
+        width: 20%;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    #nav > ul > li:hover > a,
+    #privacy > ul > li:hover > a { color: #fb8500; }
+
+    #privacy {
+        width: 15%;
+        box-sizing: border-box;
+    }
+    #privacy > ul > li {
+        float: left;
+        width: 33.33%;
+        font-size: 1.6rem;
+        text-align: right;
+    }
+    #privacy > ul > li:first-child {
+        text-align: left;
+    }
+
+    /* ----- black-header ----- */
+    #black-header { display: none; }
+    #blackLogo { display: none; }
+
+    #ham-menu {
+        float: right;
+        background: url("../images/menu-ham-w.png") center no-repeat;
+        background-size: cover;
+        width: 5rem;
+        height: 4rem;
+    }
+
+    /* ----- sidemenu ----- */
+    #side-wrap {
+        width: 30%;
+        background: #f5f3f4;
+        
+        position: fixed;
+        top: 0; right: -30%; bottom: 0;
+        
+        transition-duration: 400ms;
+        z-index: 50;
+    }
+
+    #sidemenu {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 5rem;
+        padding: 20rem 10rem 10rem;
+    }
+
+    #side-privacy {
+        font-size: 1.8rem;
+        line-height: 5rem;
+        padding: 5rem 10rem;
+    }
+
+    #sidemenu > li:hover > a,
+    #side-privacy > li:hover > a { color: #fb8500; }
+
+    /* ----- submenu ----- */
+    #subwrap {
+        background: #191919;
+        position: absolute; /* nav */
+        left: 0; top: 100%;
+        width: 100%;
+        z-index: 100;
+        
+        display: none;
+    }
+
+    #submenu {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .sublist {
+        width: 70%;
+        margin: 0 auto;
+        display: none;
+    }
+
+    .sublist > ul {
+        float: left;
+        color: #f5f3f4;
+        font-size: 1.8rem;
+        box-sizing: border-box;
+        padding: 5rem 0;
+    }
+    .sublist > ul:first-child {
+        width: 30%;
+        border-right: 1px solid #f5f3f4;
+    }
+    .sublist > ul:last-child {
+        width: 70%;
+        padding-left: 5rem;
+    }
+    .sublist > ul > li { padding: 2rem 0;}
+    .sublist > ul > li:hover > a { color: #fb8500; }
+
+    /* ----- #footer ----- */
+    #footer { background: #191919; color: #f5f3f4; }
+
+    #upfoot { padding: 10rem 0;}
+
+    #footerlogo { float: left; width: 15%; }
+    #footerlogo  > a > img { width: 100%; display: block; }
+
+    #follow { float: right; width: 30%; }
+    #follow > div {
+        float: left;
+        width: 45%;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    #foot-sns { width: 55%; float: right; }
+    #foot-sns > li {
+        float: left;
+        width: 25%;
+        box-sizing: border-box;
+        padding-left: 3rem;
+    }
+    #foot-sns > li > a > img  {width: 100%; display: block; }
+    #foot-sns > li > a > img:last-child { display: none; }
+
+    #foot-sns > li:hover > a > img:first-child { display: none; }
+    #foot-sns > li:hover > a > img:last-child { display: block; }
+
+    #downfoot { padding-bottom : 30rem; }
+    #downfoot > ul {
+        float: left;
+        width: 33.33%;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+    }
+    #third > li:nth-child(2) { font-weight: 700; }
+
+    #downfoot > ul > li:hover { color: #fb8500; }
+
+    #m-downfoot { display: none; }
+}

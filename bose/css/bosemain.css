@@ -1,0 +1,728 @@
+/*
+font-family: 'Gothic A1', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+
+color
+주조색 : #fb8500;
+보조색 : #191919;
+보조색 : #f5f3f4;
+글자색 : #191919;
+배경색 : #f5f3f4;
+*/
+@media screen and (min-width: 1200px) {
+    /* ----- all style ----- */
+    #cont1-list, #cont3-wrap-bg,
+    #cont4-wrap, #bose-icon-wrap {
+        width: 90%;
+        margin: 0 auto;
+        /* background: yellowgreen; */
+    }
+
+    /* 웹 접근성 향상을 위한 */
+    .color-btn > span,
+    #best-prev-btn > span,
+    #best-next-btn > span {
+        position: absolute;
+        display: block;
+        width: 1px; height: 1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+    }
+
+    /* 버튼 기본 스타일 제거 */
+    #best-prev-btn,
+    #best-next-btn {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    /* ----- main ----- */
+    #main {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* position: relative;
+        height: 100%; */
+        background: #f5f3f4;
+        overflow: hidden;
+    }
+
+    #left-earbuds {
+        width: 20%;
+        position: absolute;
+        top: 46%;
+        left: 30%;
+        animation: mainEarbuds 6s infinite;
+    }
+    #right-earbuds {
+        width: 20%;
+        position: absolute;
+        top: 12%;
+        right: 30%;
+        animation: mainEarbuds 6s infinite;
+    }
+    #left-earbuds > img, #right-earbuds > img { width: 100%; display: block; }
+
+    .main-txt {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 19rem;
+        font-weight: 800;
+        /* letter-spacing: 0.05rem; */
+        color: #fb8500;
+        transition-duration: 200ms;
+    }
+    #forthe {
+        position: absolute;
+        top: 30%;
+        right: -100%;
+
+        width: 100%;
+        text-align: right;
+    }
+    #loveofmusic {
+        position: absolute;
+        top: 55%;
+        /* bottom: 30%; */
+        left: -100%;
+
+        width: 100%;
+    }
+
+    /* ----- cont1-wrap ----- */
+    #cont1-wrap {
+        background: #191919;
+        height: 450%;
+        overflow: hidden;
+    }
+
+    #cont1-list { position: relative; height: 100%; }
+
+    #quite {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 6.4rem;
+        font-weight: 700;
+        color:#fb8500;
+        /* padding-top: 13%; */
+        position: absolute;
+        top: 5%;
+    }
+
+    #charl-1, #charl-2 {
+        width: 40%;
+        height: 350px;
+        overflow: hidden;
+    }
+
+    #charl-1 {
+        position: absolute;
+        top: 2%;
+        right: 20%;
+        z-index: 1;
+        /*translateY (-47 ~ -53)*/
+    }
+
+    #charl-2 {
+        position: absolute;
+        top: 8.5%;
+        right: 0;
+    }
+
+    #charl-1 > img {
+        display: block; 
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -49%) scale(1); /*translateY (-49 ~ -51) -> down*/
+    }
+
+    #charl-2 > img {
+        display: block; 
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -47%) scale(0.55); /*translateY (-47 ~ -53) -> down*/
+    }
+
+    #yellowman {
+        width: 50%;
+        height: 450px;
+        position: absolute;
+        top: 19%;
+        left: 0;
+        overflow: hidden;
+        /* border: 1px solid hotpink; */
+    }
+
+    #yellowman > img {
+        display: block;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -53%) scale(0.7); /*translateY (-47 ~ -53) -> up*/
+    }
+
+    .rotateTxt {
+        font-size: 2rem;
+        color: #fb8500;
+        text-align: right;
+        font-weight: 900;
+        transform: rotate(90deg);
+    }
+    #upText {
+        position: absolute;
+        right: -10rem;
+        top: 23%;
+    }
+
+    #moveTxt {
+        font-family: 'Montserrat', sans-serif;
+        color: #f5f3f4;
+        font-size: 16rem;
+        font-weight: 800;
+        white-space: nowrap;
+
+        position: absolute;
+        top: 35%;
+        left: 100%;
+        /* right: -100%; */
+        /* left: 0%; */
+        transition-duration: 200ms;
+    }
+
+    #moveTxt.moveLeft {
+        transform: skew(-20deg) scale(1.1);
+    }
+    #moveTxt.moveRight {
+        transform: skew(20deg) scale(1.1);
+    }
+
+    #runman {
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+    #runman > img {
+        display: block;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #restwoman {
+        width: 30%;
+        height: 650px;
+        position: absolute;
+        top: 45%;
+        left: 10%;
+        overflow: hidden;
+    }
+    #restwoman > img {
+        display: block;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -49%) scale(0.2); /*translateY (-49 ~ -51) -> down*/
+    }
+
+    #rugby-m {
+        width: 20%;
+        height: 400px;
+        position: absolute;
+        top: 48%;
+        right: 22%;
+        overflow: hidden;
+    }
+    #rugby-m > img {
+        display: block;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -53%) scale(1); /*translateY (-47 ~ -53) -> up*/
+    }
+
+    #basket-m {
+        width: 20%;
+        height: 400px;
+        position: absolute;
+        top: 48%;
+        right: 0;
+        overflow: hidden;
+    }
+    #basket-m > img {
+        display: block;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -47%) scale(1); /*translateY (-47 ~ -53) -> down*/
+    }
+
+    #downText{
+        position: absolute;
+        top: 68%;
+        left: -10rem;
+    }
+
+    #skate-w {
+        width: 35%;
+        height: 400px;
+        position: absolute;
+        top: 60%;
+        /* left: 42%; */
+        right: 24%;
+        overflow: hidden;
+    }
+    #skate-w > img {
+        display: block;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -48%) scale(1); /*translateY (-48 ~ -52) -> down*/
+    }
+
+    #scaleBose {
+        font-family: 'Montserrat', sans-serif;
+        color: #fb8500;
+        font-size: 20em;
+        font-weight: 700;
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        text-shadow: 5px 5px 1px #191919;
+
+        opacity: 0;
+        transform: scale(0);
+        transition-duration: 200ms;
+    }
+
+    #speaker-m {
+        width: 70%;
+        height: 800px;
+        position: absolute;
+        bottom: 3%;
+        left: 0;
+        overflow: hidden;
+    }
+    #speaker-m > img {
+        display: block;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%); /*sclae (1.2)*/
+    }
+
+    .cont1-img { opacity: 0; transition-duration: 400ms; }
+    .cont1-img > img { transition-duration: 400ms; }
+
+    #boseTxt {
+        font-family: 'Montserrat', sans-serif;
+        color: #fb8500;
+        font-size: 6.4rem;
+        font-weight: 700;
+        line-height: 0.9;
+
+        position: absolute;
+        bottom: 3%;
+        right: 0;
+    }
+
+    #op80 { opacity: 0.8; }
+    #op60 { opacity: 0.6; }
+    #op40 { opacity: 0.4; }
+    #op20 { opacity: 0.2; }
+    #op10 { opacity: 0.12; }
+    #op5 { opacity: 0.08; }
+
+    /* ----- #cont2-wrap ----- */
+    #cont2-wrap {
+        height: 100%;
+        background: #191919;
+        position: relative;
+        margin-top: -1px; /*1px의 마법...*/
+    }
+    #cont2-txt > h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16rem;
+        font-weight: 700;
+        color: #f5f3f4;
+        transition-duration: 300ms;
+        opacity: 0;
+    }
+    #cont2-txt > h4:first-child {
+        position: absolute;
+        /* right: 20%; */
+        right: 5%;
+        /* right: 25%; */
+        top: 20%;
+    }
+    #cont2-txt > h4:nth-child(2) {
+        position: absolute;
+        /* left: 20%; */
+        left: 5%;
+        /* left: 25%; */
+        top: 45%;
+        transform: translateY(-50%);
+    }
+    #cont2-txt > h4:last-child {
+        color: #fb8500;
+        position: absolute;
+        /* right: 30%; */
+        right: 15%;
+        /* right: 45%; */
+        bottom: 30%;
+    }
+
+    #cont2-txt.fadeinTxt > h4:first-child {
+        opacity: 1;
+        right: 20%;
+        /* transform: translateX(-40%); */
+    }
+    #cont2-txt.fadeinTxt > h4:nth-child(2) {
+        opacity: 1;
+        left: 20%;
+        /* transform: translate(40%, -50%); */
+    }
+    #cont2-txt.fadeinTxt > h4:last-child {
+        opacity: 1;
+        right: 30%;
+        /* transform: translateX(-55%); */
+    }
+
+    /* ----- #cont3-wrap ----- */
+    #cont3-wrap {
+        padding: 10% 0;
+        background: #eee;
+    }
+
+    /* #cont3-wrap-bg { position: relative; } */
+    #best-title, #best-list { float: left; }
+
+    #best-title {
+        font-size: 4.8rem;
+        font-weight: 700;
+        transform: rotate(-90deg) translate(-15rem, -12rem);
+    }
+
+    #best-list {
+        width: 75%;
+        position: relative;
+        /* border: 1px solid hotpink; */
+    }
+    #best-list-wrap { overflow: hidden;}
+
+    #best-items { width: 133.33%; }
+    .best-box {
+        float: left;
+        width: 25%;
+        transition-duration: 400ms;
+        padding: 0 1%;
+        box-sizing: border-box;
+    }
+
+    .best-box > div {
+        width: 100%;
+        /* height: 250px; */
+        background: #fff;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        position: relative;
+        /* padding: 12.8rem 6.2rem 0; */
+        padding: 33% 10% 10%;
+        margin: 25% 0 1%;
+        box-sizing: border-box;
+
+        transition-duration: 400ms;
+    }
+
+    .best-box:hover > div {
+        background: #fb8500;
+        cursor: pointer;
+    }
+
+    .best-product-img {
+        position: absolute;
+        top: -15%; left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        /* border: 1px solid yellowgreen; */
+    }
+
+    .best-product-img > img:not(:first-child) { display: none; }
+
+    #earbuds-img {
+        position: absolute;
+        top: -35%; left: 50%;
+    }
+
+    #micro-img {
+        position: absolute;
+        top: -35%; left: 50%;
+        width: 45%;
+    }
+
+    #headphone-img {
+        position: absolute;
+        top: -35%; left: 50%;
+        width: 35%;
+    }
+
+    .best-product-img > img {
+        width: 100%;
+        display: block;
+    }
+
+    .best-product-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 2.8rem;
+    }
+
+    .best-float {
+        padding-top: 1.6rem;
+    }
+    .color-btn-wrap {
+        float: left;
+    }
+    .price {
+        float: right;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    .color-btn {
+        float: left;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: relative;
+
+        cursor: pointer;
+    }
+
+    .color-btn::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        border-radius: 50%;
+        border: 2px solid #191919;
+        background: transparent;
+        transition-duration: 400ms;
+        opacity: 0;
+    }
+    .color-btn:hover::after { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+
+    .color-btn.color-on { cursor: default; }
+    .color-btn.color-on::after { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+
+    .color-btn:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    #flex-btn > li:first-child { background: #7d3d3b; }
+    #flex-btn > li:nth-child(2) { background: #191919; }
+    #flex-btn > li:nth-child(3) { background: #eee8e5; }
+    #flex-btn > li:last-child { background: #7f98a5; }
+
+    #earbuds-btn > li:first-child { background: #191919; }
+    #earbuds-btn > li:last-child { background: #eee8e5; }
+
+    #micro-btn > li:first-child { background: #eee8e5; }
+    #micro-btn > li:nth-child(2) { background: #7f98a5; }
+    #micro-btn > li:nth-child(3) { background: #f16841; }
+    #micro-btn > li:last-child { background: #191919; }
+
+    #headphone-btn > li:first-child { background: #191919; }
+    #headphone-btn > li:last-child { background: #eee8e5; }
+
+    #best-prev-btn {
+        background: url("../images/content003_btn_left_02.png") center no-repeat;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+
+        position: absolute;
+        top: 50%;
+        left: -5%;
+        transform: translateY(-50%);
+    }
+
+    #best-next-btn {
+        background: url("../images/content003_btn_right_02.png") center no-repeat;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+
+        position: absolute;
+        top: 50%;
+        right: -5%;
+        transform: translateY(-50%);
+    }
+
+    /* ----- #cont4-wrap ----- */
+    #cont4-wrap { height: 180%; }
+
+    #product-list {
+        height: 100%;
+        position: relative;
+    }
+
+    #product-title {
+        font-size: 4.8rem;
+        font-weight: 700;
+        /* padding-top: 10rem; */
+        position: absolute;
+        top: 5%;
+    }
+
+    .pro-img-wrap {
+        width: auto;
+        background: #eee;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        cursor: pointer;
+    }
+
+    #pro-earbuds-img > a > img,
+    #pro-head-img > a > img,
+    #pro-speaker-img > a > img,
+    #pro-sun-img > a > img { width: 100%; display: block; }
+
+    #pro-earbuds {
+        width: 30%;
+
+        position: absolute;
+        top: 26%;
+        left: 10%;
+    }
+    #pro-earbuds-img-wrap { height: 400px; }
+    #pro-earbuds-img {
+        /* width: 50%; */
+        width: 240px;
+
+        position: absolute;
+        top: -10%;
+        left: -10%;
+    }
+
+    #pro-head {
+        width: 30%;
+
+        position: absolute;
+        top: 8%;
+        right: 15%;
+    }
+    #pro-head-img-wrap { height: 350px; }
+    #pro-head-img {
+        /* width: 60%; */
+        width: 250px;
+
+        position: absolute;
+        bottom: -5%;
+        right: -10%;
+    }
+
+    #pro-sun {
+        /* width: 35%; */
+        width: 550px;
+
+        position: absolute;
+        top: 63%;
+        left: 20%;
+    }
+    #pro-sun-img-wrap { height: 350px; }
+    #pro-sun-img {
+        width: 60%;
+
+        position: absolute;
+        top: 45%;
+        left: -10%;
+        transform: translateY(-50%);
+    }
+
+    #pro-speaker {
+        width: 25%;
+
+        position: absolute;
+        top: 41%;
+        right: 5%;
+    }
+    #pro-speaker-img-wrap {
+        height: 550px;
+        overflow: hidden;
+    }
+    #pro-speaker-img {
+        /* width: 60%; */
+        width: 250px;
+
+        position: absolute;
+        bottom: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .pro-txt-wrap {
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding-top: 5rem;
+    }
+    .pro-txt-wrap > ul > li:first-child {float: left; }
+    .pro-txt-wrap > ul > li:last-child { float: right; }
+
+    .pro-img-wrap > span {
+        position: absolute;
+        background: #fb8500;
+        transition: all 200ms;
+    }
+    .pro-img-wrap > span:nth-child(1) { top: 0; height: 10px; width: 0; }
+    .pro-img-wrap > span:nth-child(2) { top: 0; right: 0; width: 10px; height: 0; }
+    .pro-img-wrap > span:nth-child(3) { bottom: 0; right: 0; height: 10px; width: 0; }
+    .pro-img-wrap > span:nth-child(4) { bottom: 0; left: 0; width: 10px; height: 0; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(1) { width: 100%; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(2) { height: 100%; transition-delay: 200ms; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(3) { width: 100%; transition-delay: 400ms; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(4) { height: 100%; transition-delay: 600ms; }
+
+    .product-items:nth-child(even):hover > .pro-img-wrap > span:nth-child(1) { transition-delay: 400ms; }
+    .product-items:nth-child(even):hover > .pro-img-wrap > span:nth-child(2) { transition-delay: 600ms; }
+    .product-items:nth-child(even):hover > .pro-img-wrap > span:nth-child(3) { transition-delay: 0s; }
+    .product-items:nth-child(even):hover > .pro-img-wrap > span:nth-child(4) { transition-delay: 200ms; }
+
+    .m-pro-txt { display: none; }
+
+    /* ----- #cont5-wrap ----- */
+    #cont5-wrap { background: #eee; }
+    #bose-icon {
+        padding: 5rem 0;
+    }
+
+    #bose-icon > li {
+        float: left;
+        width: 25%;
+        text-align: center;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #bose-icon > li > a {padding: 3rem; }
+    #bose-icon > li > a > img {
+        width: 40%;
+        display: block;
+        transition-duration: 200ms;
+        margin: auto;
+    }
+    #bose-icon > li > span {
+        display: inline-block;
+        font-size: 2rem;
+        padding-top: 2rem;
+        font-weight: 700;
+    }
+    #bose-icon > li:hover > span { color: #fb8500; }
+    #bose-icon > li:hover > a > img { transform: scale(0.9);}
+
+    /* ----- keyframes ----------------------------------- */
+    @keyframes mainEarbuds{
+        0%,100% { transform: translateY(0%) }
+        50% { transform: translateY(-3%) }
+    }
+}

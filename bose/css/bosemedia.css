@@ -1,0 +1,1938 @@
+/* ----- media ----------------------------------- */
+/* PC   1200px - */
+/* PC   1024px - 1199px */
+@media screen and (min-width: 1024px) and (max-width: 1199px) { /* 1024 x 600 */
+    html, body { height: 100%; }
+
+    html { font-size: 62.5%; }
+    
+    body {
+        font-family: 'Nanum Gothic', sans-serif;
+        color: #191919;
+        background: #f5f3f4;
+    }
+    
+    .clearfix::before,
+    .clearfix::after { content:""; clear: both; display: block; }
+    
+    a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+    }
+    
+    #header-wrap, #black-header, #nav,
+    #cont1-list, #cont3-wrap-bg,
+    #cont4-wrap, #bose-icon-wrap {
+        width: 90%;
+        margin: 0 auto;
+        /* background: yellowgreen; */
+    }
+    #footer-wrap { width: 80%; margin: 0 auto; }
+    
+    /* 웹 접근성 향상을 위한 */
+    #ham-menu > span,
+    .color-btn > span,
+    #best-prev-btn > span,
+    #best-next-btn > span {
+        position: absolute;
+        display: block;
+        width: 1px; height: 1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+    }
+    
+    /* 버튼 기본 스타일 제거 */
+    #ham-menu,
+    #best-prev-btn,
+    #best-next-btn {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    
+    /* ----- header ----- */
+    #header {
+        z-index: 100;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+    
+        background: #f5f3f4;
+        padding: 1.6rem 0;
+    }
+    #header-wrap { display: none; }
+    #whiteLogo { display: none; }
+    #subwrap { display: none; }
+    
+    #colorLogo {float: left; width: 25%; box-sizing: border-box;}
+    #colorLogo > a > img { width: 100%; display: block; }
+    
+    #ham-menu {
+        float: right;
+        background: url("../images/menu-ham-bk.png") center no-repeat;
+        background-size: cover;
+        width: 4rem;
+        height: 3.5rem;
+    }
+    
+    /* ----- sidemenu ----- */
+    #side-wrap {
+        width: 50%;
+        background: #f5f3f4;
+        
+        position: fixed;
+        top: 0; right: -50%; bottom: 0;
+        
+        transition-duration: 400ms;
+        z-index: 50;
+    }
+    
+    #sidemenu {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 5rem;
+        padding: 20rem 10rem 10rem;
+    }
+
+    #side-privacy {
+        font-size: 1.8rem;
+        line-height: 5rem;
+        padding: 5rem 10rem;
+    }
+    
+    #sidemenu > li:hover > a,
+    #side-privacy > li:hover > a { color: #fb8500; }
+    
+    /* ----- main ----- */
+    #main {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* position: relative;
+        height: 100%; */
+        background: #f5f3f4;
+        overflow: hidden;
+    }
+    
+    #left-earbuds {
+        width: 30%;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        animation: mainEarbuds 6s infinite;
+    }
+    #right-earbuds {
+        width: 30%;
+        position: absolute;
+        top: 18%;
+        right: 20%;
+        animation: mainEarbuds 6s infinite;
+    }
+    #left-earbuds > img, #right-earbuds > img { width: 100%; display: block; }
+    
+    .main-txt {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 11.5rem;
+        font-weight: 800;
+        /* letter-spacing: 0.05rem; */
+        color: #fb8500;
+    }
+    #forthe {
+        position: absolute;
+        top: 38%;
+        right: -100%;
+        /* right: 0%; */
+    
+        width: 100%;
+        text-align: right;
+    }
+    #loveofmusic {
+        position: absolute;
+        top: 50%;
+        left: -100%;
+        /* left: 0%; */
+    
+        width: 100%;
+    }
+    
+    /* ----- cont1-wrap ----- */
+    #cont1-wrap {
+        background: #191919;
+        overflow: hidden;
+    }
+    #cont1-list {
+        position: relative;
+        /* padding: 5rem 0; */
+        padding: 15% 0;
+    }
+    
+        /* charl */
+    #charl-1, #charl-2 {
+        width: 80%;
+        overflow: hidden;
+    }
+    #charl-2 {
+        /* margin-top: -2rem; */
+        margin-top: -6%;
+        margin-left: 20%;
+    }
+    
+    #quite {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 9rem;
+        font-weight: 700;
+        color: #fb8500;
+        /* margin: 3rem 0 10rem; */
+        margin: 15% 0 45%;
+        float: left;
+    }
+    
+    .rotateTxt { display: none; }
+    
+        /* moveTxt */
+    #moveTxt {
+        font-family: 'Montserrat', sans-serif;
+        color: #f5f3f4;
+        font-size: 12rem;
+        font-weight: 800;
+        white-space: nowrap;
+    
+        position: absolute;
+        /* top: 34%; */
+        top: 35%;
+        left: 100%;
+        /* transform: translateY(-50%); */
+        transition-duration: 200ms;
+    }
+    #moveTxt.moveLeft {
+        transform: skew(-20deg) scale(1.1);
+    }
+    #moveTxt.moveRight {
+        transform: skew(20deg) scale(1.1);
+    }
+    
+        /* runman */
+    #runman {
+        width: 100%;
+    
+        position: absolute;
+        /* top: 34%; */
+        top: 35%;
+        transform: translateY(-50%);
+    }
+    #runman > img { width: 100%; display: block; }
+    
+        /* restwoman */
+    #restwoman {
+        width: 70%;
+        /* margin-top: 25rem; */
+        margin-top: 80%;
+    }
+    
+        /* rugby-m */
+    #rugby-m {
+        width: 45%;
+        /* margin-top: 20rem; */
+        margin-top: 60%;
+    }
+    
+        /* basket-m */
+    #basket-m {
+        width: 45%;
+        /* margin-top: 5rem; */
+        margin-top: -50%;
+        margin-left: 55%;
+    }
+    
+        /* skate-m */
+    #skate-w {
+        width: 70%;
+        /* margin: 5rem 0 13rem; */
+        margin: 25% 0 50%;
+    }
+    
+    #scaleBose { display: none; }
+    
+    .cont1-img { opacity: 0; transition-duration: 400ms; }
+    .cont1-img > img { width: 100%; display: block; }
+    
+    #boseTxt {
+        font-family: 'Montserrat', sans-serif;
+        color: #fb8500;
+        font-size: 9rem;
+        font-weight: 700;
+        line-height: 0.9;
+    
+        position: absolute;
+        bottom: 2.3%;
+        right: 0;
+    }
+    
+    #op80 { opacity: 0.8; }
+    #op60 { opacity: 0.6; }
+    #op40 { opacity: 0.4; }
+    #op20 { opacity: 0.2; }
+    #op10 { opacity: 0.12; }
+    #op5 { opacity: 0.08; }
+    
+    /* ----- #cont2-wrap ----- */
+    #cont2-wrap {
+        background: #191919;
+        margin-top: -1px; /*1px의 마법...*/
+    }
+    #cont2-txt {
+        width: 90%; margin: 0 auto;
+        padding: 20rem 0;
+    }
+    #cont2-txt > h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12rem;
+        font-weight: 700;
+        color: #f5f3f4;
+        transition-duration: 300ms;
+    }
+    #cont2-txt > h4:first-child {
+        text-align: right;
+    }
+    #cont2-txt > h4:nth-child(2) {
+        text-align: left;
+        margin:  1rem 0;
+    }
+    #cont2-txt > h4:last-child {
+        color: #fb8500;
+        text-align: center;
+    }
+    
+    /* ----- #cont3-wrap ----- */
+    #cont3-wrap {
+        padding: 5rem 0 8rem;
+        background: #eee;
+    }
+    
+    #best-title {
+        font-size: 5rem;
+        font-weight: 700;
+    }
+    
+    #best-list { margin-top: 5%; width: 100%; }
+    #best-list-wrap { overflow: hidden; }
+    
+    #best-items { width: 133.33%; }
+    
+    .best-box {
+        float: left;
+        width: 25%;
+        transition-duration: 400ms;
+        padding: 0 1%;
+        box-sizing: border-box;
+    }
+    
+    .best-box > div {
+        width: 100%;
+        background: #fff;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        position: relative;
+        /* padding: 12.8rem 6.2rem 0; */
+        padding: 30% 10% 10%;
+        margin: 25% 0 1%;
+        box-sizing: border-box;
+    
+        transition-duration: 400ms;
+    }
+    
+    .best-box:hover > div {
+        background: #fb8500;
+        cursor: pointer;
+    }
+    
+    .best-product-img {
+        position: absolute;
+        top: -15%; left: 50%;
+        transform: translateX(-50%);
+        width: 180px;
+        /* border: 1px solid yellowgreen; */
+    }
+    
+    .best-product-img > img:not(:first-child) { display: none; }
+    
+    #earbuds-img {
+        position: absolute;
+        top: -25%; left: 50%;
+    }
+    
+    #micro-img {
+        position: absolute;
+        top: -25%; left: 50%;
+        width: 50%;
+    }
+    
+    #headphone-img {
+        position: absolute;
+        top: -25%; left: 50%;
+        width: 40%;
+    }
+    
+    .best-product-img > img {
+        width: 100%;
+        display: block;
+    }
+    
+    .best-product-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 2.8rem;
+    }
+    
+    .best-float {
+        padding-top: 3rem;
+    }
+    .price {
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding-top: 1.5rem;
+    }
+    
+    .color-btn {
+        float: left;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: relative;
+    
+        cursor: pointer;
+    }
+    
+    .color-btn::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        border-radius: 50%;
+        border: 2px solid #191919;
+        background: transparent;
+        transition-duration: 400ms;
+        opacity: 0;
+    }
+    .color-btn:hover::after { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    
+    .color-btn.color-on { cursor: default; }
+    .color-btn.color-on::after { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    
+    .color-btn:not(:last-child) {
+        margin-right: 8px;
+    }
+    
+    #flex-btn > li:first-child { background: #7d3d3b; }
+    #flex-btn > li:nth-child(2) { background: #191919; }
+    #flex-btn > li:nth-child(3) { background: #eee8e5; }
+    #flex-btn > li:last-child { background: #7f98a5; }
+    
+    #earbuds-btn > li:first-child { background: #191919; }
+    #earbuds-btn > li:last-child { background: #eee8e5; }
+    
+    #micro-btn > li:first-child { background: #eee8e5; }
+    #micro-btn > li:nth-child(2) { background: #7f98a5; }
+    #micro-btn > li:nth-child(3) { background: #f16841; }
+    #micro-btn > li:last-child { background: #191919; }
+    
+    #headphone-btn > li:first-child { background: #191919; }
+    #headphone-btn > li:last-child { background: #eee8e5; }
+    
+    #best-prev-btn, #best-next-btn { display: none; }
+    
+    .indi {
+        width: 60%;
+        height: 5px;
+        border-radius: 5px;
+        background: #ccc;
+        position: absolute;
+        left: 50%;
+        /* bottom: 10%; */
+        transform: translateX(-50%);
+    }
+    .indi > div {
+        width: 25%;
+        height: 5px;
+        background: #191919;
+        transition-duration: 400ms;
+        /*margin-left 줘서 효과*/
+    }
+    
+    /* ----- #cont4-wrap ----- */
+    #cont4-wrap {
+        padding: 5rem 0 8rem;
+    }
+    
+    #product-title {
+        font-size: 5rem;
+        font-weight: 700;
+    }
+    
+    .pro-img-wrap {
+        background: #eee;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        cursor: pointer;
+    }
+    
+    #pro-earbuds-img > a > img,
+    #pro-head-img > a > img,
+    #pro-speaker-img > a > img,
+    #pro-sun-img > a > img { width: 100%; display: block; }
+    
+    #pro-head {
+        width: 70%;
+        margin: 13% 0 0 20%;
+    }
+    #pro-head-img {
+        width: 250px;
+        position: absolute;
+        top: 50%;
+        right: -10%;
+    }
+    #m-head { padding: 5% 100% 60% 5%;}
+    
+    #pro-earbuds {
+        width: 65%;
+        margin: 25% 0 0 7%;
+    }
+    #pro-earbuds-img {
+        width: 240px;
+        position: absolute;
+        top: -30%;
+        left: -10%;
+    }
+    #m-earbuds {
+        text-align: right;
+        padding: 60% 5% 5% 0;
+    }
+    
+    #pro-speaker {
+        width: 50%;
+        margin: 15% 0 0 45%;
+    }
+    #pro-speaker-img-wrap {
+        overflow: hidden;
+    }
+    #pro-speaker-img {
+        width: 250px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #m-speaker {
+        text-align: right;
+        padding: 5% 5% 130% 0;
+    }
+    
+    #pro-sun {
+        width: 70%;
+        margin: 15% 0 0 15%;
+    }
+    #pro-sun-img {
+        width: 350px;
+        position: absolute;
+        top: 45%;
+        left: -10%;
+        transform: translateY(-50%);
+    }
+    #m-sun {
+        text-align: right;
+        padding: 60% 5% 5% 0;
+    }
+    
+    .pro-txt-wrap { display: none; }
+    .m-pro-txt { font-size: 2.5rem; font-weight: 700; }
+    
+    .product-items:hover > .pro-img-wrap { border: 5px solid #fb8500; }
+    
+    /* ----- #cont5-wrap ----- */
+    #cont5-wrap { background: #eee; }
+    #bose-icon {
+        padding: 5rem 0;
+    }
+    
+    #bose-icon > li {
+        float: left;
+        width: 25%;
+        text-align: center;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #bose-icon > li > a {padding: 2rem; }
+    #bose-icon > li > a > img {
+        width: 60%;
+        display: block;
+        transition-duration: 200ms;
+        margin: auto;
+    }
+    #bose-icon > li > span {
+        display: inline-block;
+        font-size: 1.6rem;
+        padding: 2rem 0;
+        font-weight: 700;
+    }
+    #bose-icon > li:hover > span { color: #fb8500; }
+    #bose-icon > li:hover > a > img { transform: scale(0.9);}
+    
+    /* ----- #footer ----- */
+    #footer {
+        background: #191919;
+        color: #f5f3f4;
+        position: relative;
+    }
+    
+    #upfoot { padding: 10rem 0;}
+
+    #footerlogo { float: left; width: 30%; }
+    #footerlogo  > a > img { width: 100%; display: block; }
+
+    #follow { float: right; width: 50%; }
+    #follow > div {
+        float: left;
+        width: 45%;
+        font-size: 2.3rem;
+        font-weight: 700;
+    }
+
+    #foot-sns { width: 55%; float: right; }
+    #foot-sns > li {
+        float: left;
+        width: 25%;
+        box-sizing: border-box;
+        padding-left: 1.5rem;
+    }
+    #foot-sns > li > a > img  {width: 100%; display: block; }
+    #foot-sns > li > a > img:last-child { display: none; }
+
+    #foot-sns > li:hover > a > img:first-child { display: none; }
+    #foot-sns > li:hover > a > img:last-child { display: block; }
+
+    #downfoot { padding-bottom : 30rem; }
+    #downfoot > ul {
+        float: left;
+        width: 33.33%;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+    }
+    #third > li:nth-child(2) { font-weight: 900; }
+
+    #downfoot > ul > li:hover { color: #fb8500; }
+
+    #m-downfoot { display: none; }
+    
+    /* ----- keyframes ----------------------------------- */
+    @keyframes mainEarbuds{
+        0%,100% { transform: translateY(0%) }
+        50% { transform: translateY(-3%) }
+    }
+}
+/* 태블릿 768px - 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) { /* 768 x 1024 */
+    html, body { height: 100%; }
+
+    html { font-size: 62.5%; }
+    
+    body {
+        font-family: 'Nanum Gothic', sans-serif;
+        color: #191919;
+        background: #f5f3f4;
+    }
+    
+    .clearfix::before,
+    .clearfix::after { content:""; clear: both; display: block; }
+    
+    a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+    }
+    
+    #header-wrap, #black-header, #nav,
+    #cont1-list, #cont3-wrap-bg,
+    #cont4-wrap, #bose-icon-wrap {
+        width: 90%;
+        margin: 0 auto;
+        /* background: yellowgreen; */
+    }
+    #footer-wrap { width: 80%; margin: 0 auto; }
+    
+    /* 웹 접근성 향상을 위한 */
+    #ham-menu > span,
+    .color-btn > span,
+    #best-prev-btn > span,
+    #best-next-btn > span {
+        position: absolute;
+        display: block;
+        width: 1px; height: 1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+    }
+    
+    /* 버튼 기본 스타일 제거 */
+    #ham-menu,
+    #best-prev-btn,
+    #best-next-btn {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    
+    /* ----- header ----- */
+    #header {
+        z-index: 100;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+    
+        background: #f5f3f4;
+        padding: 1.6rem 0;
+    }
+    #header-wrap { display: none; }
+    #whiteLogo { display: none; }
+    #subwrap { display: none; }
+    
+    #colorLogo {float: left; width: 30%; box-sizing: border-box;}
+    #colorLogo > a > img { width: 100%; display: block; }
+    
+    #ham-menu {
+        float: right;
+        background: url("../images/menu-ham-bk.png") center no-repeat;
+        background-size: cover;
+        width: 3rem;
+        height: 2.5rem;
+    }
+    
+    /* ----- sidemenu ----- */
+    #side-wrap {
+        width: 50%;
+        background: #f5f3f4;
+        
+        position: fixed;
+        top: 0; right: -50%; bottom: 0;
+        
+        transition-duration: 400ms;
+        z-index: 50;
+    }
+    
+    #sidemenu {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 5rem;
+        padding: 20rem 10rem 10rem;
+    }
+
+    #side-privacy {
+        font-size: 1.8rem;
+        line-height: 5rem;
+        padding: 5rem 10rem;
+    }
+    
+    #sidemenu > li:hover > a,
+    #side-privacy > li:hover > a { color: #fb8500; }
+    
+    /* ----- main ----- */
+    #main {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* position: relative;
+        height: 100%; */
+        background: #f5f3f4;
+        overflow: hidden;
+    }
+    
+    #left-earbuds {
+        width: 30%;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        animation: mainEarbuds 6s infinite;
+    }
+    #right-earbuds {
+        width: 30%;
+        position: absolute;
+        top: 18%;
+        right: 20%;
+        animation: mainEarbuds 6s infinite;
+    }
+    #left-earbuds > img, #right-earbuds > img { width: 100%; display: block; }
+    
+    .main-txt {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 8.5rem;
+        font-weight: 800;
+        /* letter-spacing: 0.05rem; */
+        color: #fb8500;
+    }
+    #forthe {
+        position: absolute;
+        top: 38%;
+        right: -100%;
+        /* right: 0%; */
+    
+        width: 100%;
+        text-align: right;
+    }
+    #loveofmusic {
+        position: absolute;
+        top: 50%;
+        left: -100%;
+        /* left: 0%; */
+    
+        width: 100%;
+    }
+    
+    /* ----- cont1-wrap ----- */
+    #cont1-wrap {
+        background: #191919;
+        overflow: hidden;
+    }
+    #cont1-list {
+        position: relative;
+        /* padding: 5rem 0; */
+        padding: 15% 0;
+    }
+    
+        /* charl */
+    #charl-1, #charl-2 {
+        width: 80%;
+        overflow: hidden;
+    }
+    #charl-2 {
+        /* margin-top: -2rem; */
+        margin-top: -6%;
+        margin-left: 20%;
+    }
+    
+    #quite {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 6rem;
+        font-weight: 700;
+        color: #fb8500;
+        /* margin: 3rem 0 10rem; */
+        margin: 15% 0 45%;
+    }
+    
+        /* yellowman */
+    #yellowman {
+        width: 100%;
+    }
+    
+    .rotateTxt { display: none; }
+    
+        /* moveTxt */
+    #moveTxt {
+        font-family: 'Montserrat', sans-serif;
+        color: #f5f3f4;
+        font-size: 9rem;
+        font-weight: 800;
+        white-space: nowrap;
+    
+        position: absolute;
+        /* top: 34%; */
+        top: 35%;
+        left: 100%;
+        /* transform: translateY(-50%); */
+        transition-duration: 200ms;
+    }
+    #moveTxt.moveLeft {
+        transform: skew(-20deg) scale(1.1);
+    }
+    #moveTxt.moveRight {
+        transform: skew(20deg) scale(1.1);
+    }
+    
+        /* runman */
+    #runman {
+        width: 100%;
+    
+        position: absolute;
+        /* top: 34%; */
+        top: 35%;
+        transform: translateY(-50%);
+    }
+    #runman > img { width: 100%; display: block; }
+    
+        /* restwoman */
+    #restwoman {
+        width: 70%;
+        /* margin-top: 25rem; */
+        margin-top: 80%;
+    }
+    
+        /* rugby-m */
+    #rugby-m {
+        width: 45%;
+        /* margin-top: 20rem; */
+        margin-top: 70%;
+    }
+    
+        /* basket-m */
+    #basket-m {
+        width: 45%;
+        /* margin-top: 5rem; */
+        margin-top: -50%;
+        margin-left: 55%;
+    }
+    
+        /* skate-m */
+    #skate-w {
+        width: 70%;
+        /* margin: 5rem 0 13rem; */
+        margin: 25% 0 50%;
+    }
+    
+    #scaleBose { display: none; }
+    
+    .cont1-img { opacity: 0; transition-duration: 400ms; }
+    .cont1-img > img { width: 100%; display: block; }
+    
+    #boseTxt {
+        font-family: 'Montserrat', sans-serif;
+        color: #fb8500;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 0.9;
+    
+        position: absolute;
+        bottom: 2.3%;
+        right: 0;
+    }
+    
+    #op80 { opacity: 0.8; }
+    #op60 { opacity: 0.6; }
+    #op40 { opacity: 0.4; }
+    #op20 { opacity: 0.2; }
+    #op10 { opacity: 0.12; }
+    #op5 { opacity: 0.08; }
+    
+    /* ----- #cont2-wrap ----- */
+    #cont2-wrap {
+        background: #191919;
+        margin-top: -1px; /*1px의 마법...*/
+    }
+    #cont2-txt {
+        width: 90%; margin: 0 auto;
+        padding: 15rem 0;
+    }
+    #cont2-txt > h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 9rem;
+        font-weight: 700;
+        color: #f5f3f4;
+        transition-duration: 300ms;
+    }
+    #cont2-txt > h4:first-child {
+        text-align: right;
+    }
+    #cont2-txt > h4:nth-child(2) {
+        text-align: left;
+        margin:  1rem 0;
+    }
+    #cont2-txt > h4:last-child {
+        color: #fb8500;
+        text-align: center;
+    }
+    
+    /* ----- #cont3-wrap ----- */
+    #cont3-wrap {
+        padding: 5rem 0 8rem;
+        background: #eee;
+    }
+    
+    #best-title {
+        font-size: 5rem;
+        font-weight: 700;
+    }
+    
+    #best-list { margin-top: 5%; width: 100%; }
+    #best-list-wrap { overflow: hidden; }
+    
+    #best-items { width: 133.33%; }
+    
+    .best-box {
+        float: left;
+        width: 25%;
+        transition-duration: 400ms;
+        padding: 0 1%;
+        box-sizing: border-box;
+    }
+    
+    .best-box > div {
+        width: 100%;
+        background: #fff;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        position: relative;
+        /* padding: 12.8rem 6.2rem 0; */
+        padding: 30% 10% 10%;
+        margin: 25% 0 1%;
+        box-sizing: border-box;
+    
+        transition-duration: 400ms;
+    }
+    
+    .best-box:hover > div {
+        background: #fb8500;
+        cursor: pointer;
+    }
+    
+    .best-product-img {
+        position: absolute;
+        top: -15%; left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        /* border: 1px solid yellowgreen; */
+    }
+    
+    .best-product-img > img:not(:first-child) { display: none; }
+    
+    #earbuds-img {
+        position: absolute;
+        top: -20%; left: 50%;
+    }
+    
+    #micro-img {
+        position: absolute;
+        top: -20%; left: 50%;
+        width: 50%;
+    }
+    
+    #headphone-img {
+        position: absolute;
+        top: -20%; left: 50%;
+        width: 40%;
+    }
+    
+    .best-product-img > img {
+        width: 100%;
+        display: block;
+    }
+    
+    .best-product-title {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.8rem;
+    }
+    
+    .best-float {
+        padding-top: 2rem;
+    }
+    .price {
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding-top: 1.5rem;
+    }
+    
+    .color-btn {
+        float: left;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: relative;
+    
+        cursor: pointer;
+    }
+    
+    .color-btn::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        border-radius: 50%;
+        border: 2px solid #191919;
+        background: transparent;
+        transition-duration: 400ms;
+        opacity: 0;
+    }
+    .color-btn:hover::after { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    
+    .color-btn.color-on { cursor: default; }
+    .color-btn.color-on::after { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    
+    .color-btn:not(:last-child) {
+        margin-right: 8px;
+    }
+    
+    #flex-btn > li:first-child { background: #7d3d3b; }
+    #flex-btn > li:nth-child(2) { background: #191919; }
+    #flex-btn > li:nth-child(3) { background: #eee8e5; }
+    #flex-btn > li:last-child { background: #7f98a5; }
+    
+    #earbuds-btn > li:first-child { background: #191919; }
+    #earbuds-btn > li:last-child { background: #eee8e5; }
+    
+    #micro-btn > li:first-child { background: #eee8e5; }
+    #micro-btn > li:nth-child(2) { background: #7f98a5; }
+    #micro-btn > li:nth-child(3) { background: #f16841; }
+    #micro-btn > li:last-child { background: #191919; }
+    
+    #headphone-btn > li:first-child { background: #191919; }
+    #headphone-btn > li:last-child { background: #eee8e5; }
+    
+    #best-prev-btn, #best-next-btn { display: none; }
+    
+    .indi {
+        width: 60%;
+        height: 5px;
+        border-radius: 5px;
+        background: #ccc;
+        position: absolute;
+        left: 50%;
+        /* bottom: 10%; */
+        transform: translateX(-50%);
+    }
+    .indi > div {
+        width: 25%;
+        height: 5px;
+        background: #191919;
+        transition-duration: 400ms;
+        /*margin-left 줘서 효과*/
+    }
+    
+    /* ----- #cont4-wrap ----- */
+    #cont4-wrap {
+        padding: 5rem 0 8rem;
+    }
+    
+    #product-title {
+        font-size: 5rem;
+        font-weight: 700;
+    }
+    
+    .pro-img-wrap {
+        background: #eee;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        cursor: pointer;
+    }
+    
+    #pro-earbuds-img > a > img,
+    #pro-head-img > a > img,
+    #pro-speaker-img > a > img,
+    #pro-sun-img > a > img { width: 100%; display: block; }
+    
+    #pro-head {
+        width: 70%;
+        margin: 13% 0 0 20%;
+    }
+    #pro-head-img {
+        width: 200px;
+        position: absolute;
+        top: 50%;
+        right: -10%;
+    }
+    #m-head { padding: 5% 100% 60% 5%;}
+    
+    #pro-earbuds {
+        width: 65%;
+        margin: 25% 0 0 7%;
+    }
+    #pro-earbuds-img {
+        width: 180px;
+        position: absolute;
+        top: -30%;
+        left: -10%;
+    }
+    #m-earbuds {
+        text-align: right;
+        padding: 60% 5% 5% 0;
+    }
+    
+    #pro-speaker {
+        width: 50%;
+        margin: 15% 0 0 45%;
+    }
+    #pro-speaker-img-wrap {
+        overflow: hidden;
+    }
+    #pro-speaker-img {
+        width: 150px;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #m-speaker {
+        text-align: right;
+        padding: 5% 5% 130% 0;
+    }
+    
+    #pro-sun {
+        width: 70%;
+        margin: 15% 0 0 15%;
+    }
+    #pro-sun-img {
+        width: 250px;
+        position: absolute;
+        top: 45%;
+        left: -10%;
+        transform: translateY(-50%);
+    }
+    #m-sun {
+        text-align: right;
+        padding: 60% 5% 5% 0;
+    }
+    
+    .pro-txt-wrap { display: none; }
+    .m-pro-txt { font-size: 2.5rem; font-weight: 700; }
+    
+    .product-items:hover > .pro-img-wrap { border: 5px solid #fb8500; }
+    
+    /* ----- #cont5-wrap ----- */
+    #cont5-wrap { background: #eee; }
+    #bose-icon {
+        padding: 5rem 0;
+    }
+    
+    #bose-icon > li {
+        float: left;
+        width: 25%;
+        text-align: center;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #bose-icon > li > a {padding: 2rem; }
+    #bose-icon > li > a > img {
+        width: 60%;
+        display: block;
+        transition-duration: 200ms;
+        margin: auto;
+    }
+    #bose-icon > li > span {
+        display: inline-block;
+        font-size: 1.6rem;
+        padding: 2rem 0;
+        font-weight: 700;
+    }
+    #bose-icon > li:hover > span { color: #fb8500; }
+    #bose-icon > li:hover > a > img { transform: scale(0.9);}
+    
+    /* ----- #footer ----- */
+    #footer {
+        background: #191919;
+        color: #f5f3f4;
+        position: relative;
+    }
+    
+    #upfoot { padding: 10rem 0;}
+
+    #footerlogo { float: left; width: 30%; }
+    #footerlogo  > a > img { width: 100%; display: block; }
+
+    #follow { float: right; width: 50%; }
+    #follow > div {
+        float: left;
+        width: 45%;
+        font-size: 2.3rem;
+        font-weight: 700;
+    }
+
+    #foot-sns { width: 55%; float: right; }
+    #foot-sns > li {
+        float: left;
+        width: 25%;
+        box-sizing: border-box;
+        padding-left: 1.5rem;
+    }
+    #foot-sns > li > a > img  {width: 100%; display: block; }
+    #foot-sns > li > a > img:last-child { display: none; }
+
+    #foot-sns > li:hover > a > img:first-child { display: none; }
+    #foot-sns > li:hover > a > img:last-child { display: block; }
+
+    #downfoot { padding-bottom : 30rem; }
+    #downfoot > ul {
+        float: left;
+        width: 33.33%;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+    }
+    #third > li:nth-child(2) { font-weight: 900; }
+
+    #downfoot > ul > li:hover { color: #fb8500; }
+
+    #m-downfoot { display: none; }
+    
+    /* ----- keyframes ----------------------------------- */
+    @keyframes mainEarbuds{
+        0%,100% { transform: translateY(0%) }
+        50% { transform: translateY(-3%) }
+    }
+}
+/* 모바일 480px - 767px */
+@media screen and (max-width: 767px) { /* 480 x 800 */
+    html, body { height: 100%; }
+
+    html { font-size: 62.5%; }
+    
+    body {
+        font-family: 'Nanum Gothic', sans-serif;
+        color: #191919;
+        background: #f5f3f4;
+    }
+    
+    .clearfix::before,
+    .clearfix::after { content:""; clear: both; display: block; }
+    
+    a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+    }
+    
+    #header-wrap, #black-header, #nav,
+    #cont1-list, #cont3-wrap-bg,
+    #cont4-wrap, #bose-icon-wrap {
+        width: 90%;
+        margin: 0 auto;
+        /* background: yellowgreen; */
+    }
+    #footer-wrap { width: 80%; margin: 0 auto; }
+    
+    /* 웹 접근성 향상을 위한 */
+    #ham-menu > span,
+    .color-btn > span,
+    #best-prev-btn > span,
+    #best-next-btn > span {
+        position: absolute;
+        display: block;
+        width: 1px; height: 1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+    }
+    
+    /* 버튼 기본 스타일 제거 */
+    #ham-menu,
+    #best-prev-btn,
+    #best-next-btn {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    
+    /* ----- header ----- */
+    #header {
+        z-index: 100;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+    
+        background: #f5f3f4;
+        padding: 1.6rem 0;
+    }
+    #header-wrap { display: none; }
+    #whiteLogo { display: none; }
+    #subwrap { display: none; }
+    
+    #colorLogo {float: left; width: 45%; box-sizing: border-box;}
+    #colorLogo > a > img { width: 100%; display: block; }
+    
+    #ham-menu {
+        float: right;
+        background: url("../images/menu-ham-bk.png") center no-repeat;
+        background-size: cover;
+        width: 3rem;
+        height: 2.5rem;
+    }
+    
+    /* ----- sidemenu ----- */
+    #side-wrap {
+        width: 50%;
+        background: #f5f3f4;
+        
+        position: fixed;
+        top: 0; right: -50%; bottom: 0;
+        
+        transition-duration: 400ms;
+        z-index: 50;
+    }
+    
+    #sidemenu {
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 4rem;
+        padding: 8rem 3rem 5rem;
+    }
+    
+    #side-privacy {
+        font-size: 1.2rem;
+        line-height: 3rem;
+        padding: 0 3rem;
+    }
+    
+    #sidemenu > li:hover > a,
+    #side-privacy > li:hover > a { color: #fb8500; }
+    
+    /* ----- main ----- */
+    #main {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* position: relative;
+        height: 100%; */
+        background: #f5f3f4;
+        overflow: hidden;
+    }
+    
+    #left-earbuds {
+        width: 35%;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        animation: mainEarbuds 6s infinite;
+    }
+    #right-earbuds {
+        width: 35%;
+        position: absolute;
+        top: 18%;
+        right: 20%;
+        animation: mainEarbuds 6s infinite;
+    }
+    #left-earbuds > img, #right-earbuds > img { width: 100%; display: block; }
+    
+    .main-txt {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 8rem;
+        font-weight: 800;
+        /* letter-spacing: 0.05rem; */
+        color: #fb8500;
+    }
+    #forthe {
+        position: absolute;
+        top: 35%;
+        right: -100%;
+        /* right: 0%; */
+    
+        width: 100%;
+        text-align: right;
+    }
+    #loveofmusic {
+        position: absolute;
+        top: 50%;
+        left: -100%;
+        /* left: 0%; */
+    
+        width: 100%;
+    }
+    
+    /* ----- cont1-wrap ----- */
+    #cont1-wrap {
+        background: #191919;
+        overflow: hidden;
+    }
+    #cont1-list {
+        position: relative;
+        /* padding: 5rem 0; */
+        padding: 15% 0;
+    }
+    
+        /* charl */
+    #charl-1, #charl-2 {
+        width: 80%;
+        overflow: hidden;
+    }
+    #charl-2 {
+        /* margin-top: -2rem; */
+        margin-top: -6%;
+        margin-left: 20%;
+    }
+    
+    #quite {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #fb8500;
+        /* margin: 3rem 0 10rem; */
+        margin: 15% 0 45%;
+    }
+    
+    .rotateTxt { display: none; }
+    
+        /* moveTxt */
+    #moveTxt {
+        font-family: 'Montserrat', sans-serif;
+        color: #f5f3f4;
+        font-size: 6rem;
+        font-weight: 800;
+        white-space: nowrap;
+    
+        position: absolute;
+        /* top: 34%; */
+        top: 33%;
+        left: 100%;
+        transition-duration: 200ms;
+    }
+    #moveTxt.moveLeft {
+        transform: skew(-20deg) scale(1.1);
+    }
+    #moveTxt.moveRight {
+        transform: skew(20deg) scale(1.1);
+    }
+    
+        /* runman */
+    #runman {
+        width: 100%;
+    
+        position: absolute;
+        /* top: 34%; */
+        top: 34%;
+        transform: translateY(-50%);
+    }
+    #runman > img { width: 100%; display: block; }
+    
+        /* restwoman */
+    #restwoman {
+        width: 70%;
+        /* margin-top: 25rem; */
+        margin-top: 72%;
+    }
+    
+        /* rugby-m */
+    #rugby-m {
+        width: 45%;
+        /* margin-top: 20rem; */
+        margin-top: 70%;
+    }
+    
+        /* basket-m */
+    #basket-m {
+        width: 45%;
+        /* margin-top: 5rem; */
+        margin-top: -50%;
+        margin-left: 55%;
+    }
+    
+        /* skate-m */
+    #skate-w {
+        width: 70%;
+        /* margin: 5rem 0 13rem; */
+        margin: 25% 0 50%;
+    }
+    
+    #scaleBose { display: none; }
+    
+    .cont1-img { opacity: 0; transition-duration: 400ms; }
+    .cont1-img > img { width: 100%; display: block; }
+    
+    #boseTxt {
+        font-family: 'Montserrat', sans-serif;
+        color: #fb8500;
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 0.9;
+    
+        position: absolute;
+        bottom: 2.3%;
+        right: 0;
+    }
+    
+    #op80 { opacity: 0.8; }
+    #op60 { opacity: 0.6; }
+    #op40 { opacity: 0.4; }
+    #op20 { opacity: 0.2; }
+    #op10 { opacity: 0.12; }
+    #op5 { opacity: 0.08; }
+    
+    /* ----- #cont2-wrap ----- */
+    #cont2-wrap {
+        background: #191919;
+        margin-top: -1px; /*1px의 마법...*/
+    }
+    #cont2-txt {
+        width: 90%; margin: 0 auto;
+        padding: 10rem 0;
+    }
+    #cont2-txt > h4 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 5rem;
+        font-weight: 700;
+        color: #f5f3f4;
+        transition-duration: 300ms;
+    }
+    #cont2-txt > h4:first-child {
+        text-align: right;
+    }
+    #cont2-txt > h4:nth-child(2) {
+        text-align: left;
+        margin:  1rem 0;
+    }
+    #cont2-txt > h4:last-child {
+        color: #fb8500;
+        text-align: center;
+    }
+    
+    /* ----- #cont3-wrap ----- */
+    #cont3-wrap {
+        padding: 5rem 0 8rem;
+        background: #eee;
+    }
+    
+    #best-title {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    #best-list { margin-top: 5%; width: 100%; }
+    #best-list-wrap { overflow: hidden; }
+    
+    #best-items { width: 400%; }
+    
+    .best-box {
+        float: left;
+        width: 23%;
+        transition-duration: 400ms;
+        padding: 0 1%;
+        box-sizing: border-box;
+    }
+    
+    .best-box > div {
+        width: 100%;
+        background: #fff;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        position: relative;
+        /* padding: 12.8rem 6.2rem 0; */
+        padding: 30% 10% 10%;
+        margin: 25% 0 1%;
+        box-sizing: border-box;
+    
+        transition-duration: 400ms;
+    }
+    
+    .best-box:hover > div {
+        background: #fb8500;
+        cursor: pointer;
+    }
+    
+    .best-product-img {
+        position: absolute;
+        top: -15%; left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        /* border: 1px solid yellowgreen; */
+    }
+    
+    .best-product-img > img:not(:first-child) { display: none; }
+    
+    #earbuds-img {
+        position: absolute;
+        top: -35%; left: 50%;
+    }
+    
+    #micro-img {
+        position: absolute;
+        top: -35%; left: 50%;
+        width: 45%;
+    }
+    
+    #headphone-img {
+        position: absolute;
+        top: -35%; left: 50%;
+        width: 35%;
+    }
+    
+    .best-product-img > img {
+        width: 100%;
+        display: block;
+    }
+    
+    .best-product-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 2.8rem;
+    }
+    
+    .best-float {
+        padding-top: 1.6rem;
+    }
+    .color-btn-wrap {
+        float: left;
+    }
+    .price {
+        float: right;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    
+    .color-btn {
+        float: left;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: relative;
+    
+        cursor: pointer;
+    }
+    
+    .color-btn::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        border-radius: 50%;
+        border: 2px solid #191919;
+        background: transparent;
+        transition-duration: 400ms;
+        opacity: 0;
+    }
+    .color-btn:hover::after { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    
+    .color-btn.color-on { cursor: default; }
+    .color-btn.color-on::after { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    
+    .color-btn:not(:last-child) {
+        margin-right: 8px;
+    }
+    
+    #flex-btn > li:first-child { background: #7d3d3b; }
+    #flex-btn > li:nth-child(2) { background: #191919; }
+    #flex-btn > li:nth-child(3) { background: #eee8e5; }
+    #flex-btn > li:last-child { background: #7f98a5; }
+    
+    #earbuds-btn > li:first-child { background: #191919; }
+    #earbuds-btn > li:last-child { background: #eee8e5; }
+    
+    #micro-btn > li:first-child { background: #eee8e5; }
+    #micro-btn > li:nth-child(2) { background: #7f98a5; }
+    #micro-btn > li:nth-child(3) { background: #f16841; }
+    #micro-btn > li:last-child { background: #191919; }
+    
+    #headphone-btn > li:first-child { background: #191919; }
+    #headphone-btn > li:last-child { background: #eee8e5; }
+    
+    #best-prev-btn, #best-next-btn { display: none; }
+    
+    .indi {
+        width: 60%;
+        height: 5px;
+        border-radius: 5px;
+        background: #ccc;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5%;
+    }
+    .indi > div {
+        width: 25%;
+        height: 5px;
+        border-radius: 5px;
+        background: #191919;
+        transition-duration: 400ms;
+        /*margin-left 줘서 효과*/
+    }
+    
+    /* ----- #cont4-wrap ----- */
+    #cont4-wrap {
+        padding: 5rem 0 8rem;
+    }
+    
+    #product-title {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    .pro-img-wrap {
+        background: #eee;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        cursor: pointer;
+    }
+    
+    #pro-earbuds-img > a > img,
+    #pro-head-img > a > img,
+    #pro-speaker-img > a > img,
+    #pro-sun-img > a > img { width: 100%; display: block; }
+    
+    #pro-head {
+        width: 70%;
+        margin: 13% 0 0 13%;
+    }
+    #pro-head-img {
+        width: 150px;
+        position: absolute;
+        top: 20%;
+        right: -20%;
+    }
+    #m-head { padding: 5% 100% 60% 5%;}
+    
+    #pro-earbuds {
+        width: 65%;
+        margin: 30% 0 0 7%;
+    }
+    #pro-earbuds-img {
+        width: 130px;
+        position: absolute;
+        top: -30%;
+        left: -10%;
+    }
+    #m-earbuds {
+        text-align: right;
+        padding: 60% 5% 5% 0;
+    }
+    
+    #pro-speaker {
+        width: 50%;
+        margin: 15% 0 0 45%;
+    }
+    #pro-speaker-img-wrap {
+        overflow: hidden;
+    }
+    #pro-speaker-img {
+        width: 100px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #m-speaker {
+        text-align: right;
+        padding: 5% 5% 130% 0;
+    }
+    
+    #pro-sun {
+        width: 70%;
+        margin: 15% 0 0 15%;
+    }
+    #pro-sun-img {
+        width: 160px;
+        position: absolute;
+        top: 45%;
+        left: -10%;
+        transform: translateY(-50%);
+    }
+    #m-sun {
+        text-align: right;
+        padding: 60% 5% 5% 0;
+    }
+    
+    .pro-txt-wrap { display: none; }
+    .m-pro-txt { font-size: 1.5rem; font-weight: 700; }
+    
+    .product-items:hover > .pro-img-wrap { border: 5px solid #fb8500; }
+    
+    /* ----- #cont5-wrap ----- */
+    #cont5-wrap { background: #eee; }
+    #bose-icon {
+        padding: 5rem 0;
+    }
+    
+    #bose-icon > li {
+        float: left;
+        width: 50%;
+        text-align: center;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #bose-icon > li > a {padding: 2rem; }
+    #bose-icon > li > a > img {
+        width: 60%;
+        display: block;
+        transition-duration: 200ms;
+        margin: auto;
+    }
+    #bose-icon > li > span {
+        display: inline-block;
+        font-size: 1.6rem;
+        padding: 2rem 0;
+        font-weight: 700;
+    }
+    #bose-icon > li:hover > span { color: #fb8500; }
+    #bose-icon > li:hover > a > img { transform: scale(0.9);}
+    
+    /* ----- #footer ----- */
+    #footer {
+        background: #191919;
+        color: #f5f3f4;
+        position: relative;
+    }
+    
+    #upfoot { padding: 5rem 0;}
+    
+    #footerlogo {
+        width: 40%;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #footerlogo  > a > img { width: 100%; display: block; }
+    
+    #follow { width: 100%; }
+    #follow > div {
+        float: left;
+        width: 45%;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    
+    #foot-sns { width: 55%; float: right; }
+    #foot-sns > li {
+        float: left;
+        width: 25%;
+        box-sizing: border-box;
+        padding-left: 1.6rem;
+    }
+    #foot-sns > li > a > img  {width: 100%; display: block; }
+    #foot-sns > li > a > img:last-child { display: none; }
+    
+    #foot-sns > li:hover > a > img:first-child { display: none; }
+    #foot-sns > li:hover > a > img:last-child { display: block; }
+    
+    #downfoot { display: none; }
+    #m-downfoot { padding-bottom : 30rem; }
+    #m-downfoot > ul {
+        float: left;
+        width: 50%;
+        font-size: 1.1rem;
+        line-height: 2.5rem;
+    }
+    #m-first > li:nth-child(5) { padding-top: 2rem; }
+    #m-first > li:nth-child(6) { font-weight: 900; }
+    
+    #m-downfoot > ul > li:hover { color: #fb8500; }
+    
+    /* ----- keyframes ----------------------------------- */
+    @keyframes mainEarbuds{
+        0%,100% { transform: translateY(0%) }
+        50% { transform: translateY(-3%) }
+    }
+}
+/* 모바일 320px - 479px */
+@media screen and (max-width: 479px) { /* 320 x 533 */
+    #ham-menu {
+        width: 2.5rem;
+        height: 2rem;
+    }
+
+    /* ----- main ----- */
+    .main-txt { font-size: 6rem; }
+
+    /* ----- #cont3-wrap ----- */
+    #earbuds-img, #micro-img, #headphone-img { top: -25%; }
+}

@@ -1,0 +1,274 @@
+.colorblue {
+    color: #0d7acf;
+}
+
+.colorred {
+    color: #e00000;
+}
+
+#bg-wrap {
+    background: url("../images/sub-content002_strokelogo_op40.png") left bottom no-repeat;
+    background-size: 30%;
+}
+
+#content-wrap {
+    width: 1200px; margin: 0 auto;
+}
+
+#content-wrap > div:first-child > img {
+    width: 100%;
+    display: block;
+}
+
+
+#sidebar {
+    float: left; width:20%;
+    text-align: center;
+}
+
+#content { float: right; width: 77%; }
+
+#sidebar > h2 {
+    font-size: 2em;
+    font-weight: 700;
+    padding: 2em 0 1.3em;
+}
+
+#side-menu > li {
+    line-height: 3em;
+    border: 1px solid #111;
+    border-radius: 5px;
+}
+
+#side-menu > li:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+
+#side-menu > li:nth-child(4) {
+    color: #024d71;
+    font-weight: 700;
+    border: 1px solid #024d71;
+}
+
+#side-menu > li:hover {
+    color: #024d71;
+    font-weight: 700;
+    border: 1px solid #024d71;
+}
+
+#cont1 {
+    padding: 6em 0 1em;
+    border-bottom: 4px solid #024d71;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+#cont1 > h3 {
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+#cont1 > p {
+    color: #555;
+    position: absolute;
+    bottom: 1em;
+    right: 0;
+}
+
+#cont2 {
+    border: 1px solid #0d7acf;
+    border-radius: 5px;
+    padding: 2em 2em;
+    line-height: 1.5em;
+    word-spacing: 0.1em;
+}
+
+#cont3 > h6, #cont4 > h6 {
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 3em 0 2em;
+}
+
+#lookup {
+    border: 2px solid #0d7acf;
+    border-radius: 10px;
+    padding: 5em 0;
+    text-align: center;
+}
+
+#lookupform > label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#lookupform > label > span {
+    display: inline-block;
+    width: 5em;
+    letter-spacing: 0.3em;
+    text-align: justify;
+}
+
+.secret { opacity: 0; visibility: hidden; }
+
+#lookupform > label > input {
+    width: 12em;
+    margin-left: 2em;
+    padding: 0.1em;
+    border: 1px solid #111;
+    border-radius: 5px;
+}
+
+#lookupform > label > input:focus {
+    outline: 1px solid #0d7acf;
+    border: 1px solid #0d7acf;
+}
+
+#lookupform > input[type="submit"] {
+    background-color: #0d7acf;
+    outline: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    padding: 0.4em 1em;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+#cont4 > p {
+    line-height: 1.5em;
+    word-spacing: 0.1em;
+    padding-bottom: 1.5em;
+}
+
+th, tr {
+    border-bottom: 1px solid #0d7acf;
+}
+
+#table {
+    width: 100%;
+    border: 1px solid #0d7acf;
+    border-radius: 5px;
+    line-height: 1.5em;
+
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #0d7acf;
+}
+
+#table > thead > tr > th,
+#table > tbody > tr > th {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+#table > thead > tr > th,
+#table > tbody > tr > th,
+#table > tbody > tr > td {
+    padding: 0.5em 0;
+    vertical-align: middle;
+}
+
+#table > tbody > tr > th { font-size: 1.2em; }
+
+#table > thead > tr > th:first-child,
+#table > tbody > tr > th {
+    width: 35%;
+    border-right: 1px solid #0d7acf;
+}
+
+#table > thead > tr > th:last-child,
+#table > tbody > tr > td {
+    width: 65%;
+}
+
+#table > tbody > tr > td {
+    padding-left: 1em;
+    line-height: 2.5em;
+}
+#table > tbody > tr > td > ul > li {
+    padding-left: 1em;
+    position: relative;
+}
+
+#table > tbody > tr > td > ul > li:not(:last-child)::before {
+    content:"";
+    width: 5px; height: 5px;
+    background: #024d71;
+    position: absolute;
+    left: 0; top: 48%;
+}
+
+#table > tbody > tr > td > ul > li:last-child {
+    font-size: 0.9em;
+    font-weight: 700;
+    color: #024d71;
+    padding: 0.5em 0 0 0;
+
+}
+
+#cont4-list > li {
+    background: url("../images/content004-recruitment-check.png") left no-repeat;
+    background-size: auto;
+    line-height: 1.5em;
+    margin: 1.5em 0;
+    padding-left: 2em;
+}
+
+#cont4-list > li:last-child {
+    background-position-y: 6px;
+}
+
+#cont5 {
+    border: 1px solid #0d7acf;
+    border-radius: 5px;
+    padding: 1em 2em;
+    font-size: 1.1em;
+    line-height: 2em;
+    margin: 3em 0 10em;
+}
+
+#cont5 > ul > li > span:first-child {
+    color: #06799b;
+    font-weight: 700;
+    padding-right: 1.5em;
+    border-right: 1px solid #06799b;
+}
+
+#cont5 > ul > li > span:last-child {
+    padding-left: 1.5em;
+}
+
+.page {
+    opacity: 0;
+    transition-duration: 1000ms;
+}
+
+.modal {
+    border: 2px solid #024d71;
+    border-radius: 5px;
+    background: #fafafa;
+    padding: 3em 5em;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+
+    position: fixed;
+    /* top: 20%; */
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition-duration: 400ms;
+
+    letter-spacing: 0.1em;
+    z-index: 300;
+}
+
+.modal > span {
+    color: #024d71;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {
+    #first-line, #mainmenu, #submenu, #content-wrap { width: 100%; }
+}

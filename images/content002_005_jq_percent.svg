@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 160 160" style="enable-background:new 0 0 160 160;" xml:space="preserve">
+<style type="text/css">
+	.jq_svg_bg {
+		opacity:0.3;
+		fill:none;
+		stroke:#131B28;
+		stroke-width:10;
+		stroke-miterlimit:10;
+	}
+
+	.jq_svg {
+		opacity:1;
+		fill:none;
+		stroke:#131B28;
+		stroke-width:10;
+		stroke-miterlimit:10;
+		stroke-dasharray: 470;
+		stroke-dashoffset: 470;
+		stroke-linecap: round;
+		transform: rotate(-90deg);
+		transform-origin: 50% 50%;
+	}
+
+	.jq_svg.fill {
+		animation: jqfill 5s steps(500) forwards;
+	}
+
+	@keyframes jqfill {
+		100% {stroke-dashoffset: 50;}
+	}
+</style>
+<circle class="jq_svg_bg" cx="80" cy="80" r="75"/>
+<circle class="jq_svg" cx="80" cy="80" r="75"/>
+</svg>
