@@ -11,7 +11,6 @@ $(function () {
     var $subwrap = $("#subwrap");
     
     $mainmenu.on("click", function (e) {
-        console.log("click")
         e.preventDefault();
         var $dataTarget = $(this).attr("data-target");
         

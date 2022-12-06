@@ -4,6 +4,8 @@ $(function () {
     // 1.1. .history-txt는 좌우에서 텍스트가 들어오고 opacity가 0에서 1로 변하고
     // 1.2. .history-img는 opacity가 0에서 1로 변하여라
     var $window = $(window);
+    var windowWidth = $window.width();
+    var windowHeight = $window.height();
     var $hisTxt = $(".history-txt");
     var $histImg = $(".history-img");
 
@@ -38,11 +40,26 @@ $(function () {
     var amarImgPosi = $("#amarG-img").offset().left;
     var amarSpanPosi = $("#amarSpan").offset().left;
     var amarTxtPosi = amarImgPosi - amarSpanPosi;
-    console.log("ImgPosi = " + amarImgPosi);
-    console.log("SpanPosi = " + amarSpanPosi);
-    console.log("TxtPosi = " + amarTxtPosi);
 
-    $("#amarG-txt").css({left: amarTxtPosi});
+    if ( windowWidth >= 1200 ) {
+        $("#amarG-txt").css({left: amarTxtPosi});
+        
+        if( amarTxtPosi < 0 || amarSpanPosi < 100 ) {
+            $("#amarG-txt").css({left: 0}).children("h1").css({
+                fontSize: "5rem",
+                lineHeight: "6rem",
+                textShadow: "1px 1px 1px rgba(245, 243, 244, 0.7)"
+            }).children("span").css({
+                color: "#191919",
+                textShadow: "1px 1px 1px rgba(245, 243, 244, 0.7)"
+            });
+        }
+    } else if ( windowWidth <= 1199 ) {
+        var headerHeight = $("#header").outerHeight();
+
+        $("#amarG").css({paddingTop: headerHeight});
+    }
+    
 
     // console.log("height = " + $("#since1964").innerHeight());
     // console.log("outerheight = " + $("#since1964").outerHeight(true));
@@ -55,20 +72,63 @@ $(function () {
     var $prevBtn = $("#bosePower-leftBtn");
     var $nextBtn = $("#bosePower-rightBtn");
     var $bosePowerList = $("#bosePower-list");
+    var $bosePower = $("#bosePower");
 
-    $prevBtn.on("click", function () {
+    $prevBtn.on("click", prevBtn);
+
+    $nextBtn.on("click", nextBtn);
+
+    if ( windowWidth <= 767 ) {
+        var touchStart = 0;
+        var touch = false;
+
+        var subTimer = window.setInterval(nextBtn, 6000);
+
+        $bosePower.on("touchstart", function (e) {
+            window.clearInterval( subTimer );
+
+            touchStart = e.originalEvent.touches[0].pageX;
+            touch = true;
+            console.log("touch")
+        })
+
+        $bosePower.on("touchmove", function (e) {
+            if ( touch == true ) {
+                $bosePowerList.css("margin-left", (e.originalEvent.touches[0].pageX - touchStart) + "px");
+            }
+        })
+
+        $bosePower.on("touchend", function (e) {
+            touch = false;
+
+            if ( e.originalEvent.changedTouches[0].pageX - touchStart < -10) {
+                nextBtn();
+            } else if( e.originalEvent.changedTouches[0].pageX - touchStart > 10) {
+                prevBtn();
+            }
+
+            subTimer = window.setInterval(nextBtn, 6000);
+        })
+    }
+
+    // ----- function --------------------------------------------------------
+    function prevBtn () {
         $bosePowerList.prepend( $bosePowerList.children(":last") )
             .css("margin-left", "-100%").animate({marginLeft: "0"});
-    });
+    }
 
-    $nextBtn.on("click", function () {
+    function nextBtn () {
         $bosePowerList.animate({marginLeft: "-100%"}, function () {
             $(this).removeAttr("style").children(":first").appendTo($(this));
         });
-    });
+    }
+
 
     $window.on("resize", function () {
+        windowWidth = $window.width();
+        windowHeight = $window.height();
         amarImgPosi = $("#amarG-img").offset().left;
         amarSpanPosi = $("#amarSpan").offset().left;
+        amarTxtPosi = amarImgPosi - amarSpanPosi;
     });
 });

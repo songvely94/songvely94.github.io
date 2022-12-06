@@ -225,6 +225,7 @@
         /* top: 34%; */
         top: 35%;
         transform: translateY(-50%);
+        z-index: 2;
     }
     #runman > img { width: 100%; display: block; }
     
@@ -554,7 +555,18 @@
     .pro-txt-wrap { display: none; }
     .m-pro-txt { font-size: 2.5rem; font-weight: 700; }
     
-    .product-items:hover > .pro-img-wrap { border: 5px solid #fb8500; }
+    .pro-img-wrap > span {
+        position: absolute;
+        background: #fb8500;
+    }
+    .pro-img-wrap > span:nth-child(1) { top: 0; height: 5px; width: 0; }
+    .pro-img-wrap > span:nth-child(2) { top: 0; right: 0; width: 5px; height: 0; }
+    .pro-img-wrap > span:nth-child(3) { bottom: 0; right: 0; height: 5px; width: 0; }
+    .pro-img-wrap > span:nth-child(4) { bottom: 0; left: 0; width: 5px; height: 0; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(1) { width: 100%; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(2) { height: 100%; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(3) { width: 100%; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(4) { height: 100%; }
     
     /* ----- #cont5-wrap ----- */
     #cont5-wrap { background: #eee; }
@@ -866,6 +878,7 @@
         /* top: 34%; */
         top: 35%;
         transform: translateY(-50%);
+        z-index: 2;
     }
     #runman > img { width: 100%; display: block; }
     
@@ -1195,7 +1208,18 @@
     .pro-txt-wrap { display: none; }
     .m-pro-txt { font-size: 2.5rem; font-weight: 700; }
     
-    .product-items:hover > .pro-img-wrap { border: 5px solid #fb8500; }
+    .pro-img-wrap > span {
+        position: absolute;
+        background: #fb8500;
+    }
+    .pro-img-wrap > span:nth-child(1) { top: 0; height: 5px; width: 0; }
+    .pro-img-wrap > span:nth-child(2) { top: 0; right: 0; width: 5px; height: 0; }
+    .pro-img-wrap > span:nth-child(3) { bottom: 0; right: 0; height: 5px; width: 0; }
+    .pro-img-wrap > span:nth-child(4) { bottom: 0; left: 0; width: 5px; height: 0; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(1) { width: 100%; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(2) { height: 100%; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(3) { width: 100%; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(4) { height: 100%; }
     
     /* ----- #cont5-wrap ----- */
     #cont5-wrap { background: #eee; }
@@ -1501,6 +1525,7 @@
         /* top: 34%; */
         top: 34%;
         transform: translateY(-50%);
+        z-index: 2;
     }
     #runman > img { width: 100%; display: block; }
     
@@ -1834,7 +1859,20 @@
     .pro-txt-wrap { display: none; }
     .m-pro-txt { font-size: 1.5rem; font-weight: 700; }
     
-    .product-items:hover > .pro-img-wrap { border: 5px solid #fb8500; }
+    /* .pro-img-wrap { box-sizing: border-box; } */
+    /* .product-items:hover > .pro-img-wrap { border: 5px solid #fb8500; } */
+    .pro-img-wrap > span {
+        position: absolute;
+        background: #fb8500;
+    }
+    .pro-img-wrap > span:nth-child(1) { top: 0; height: 5px; width: 0; }
+    .pro-img-wrap > span:nth-child(2) { top: 0; right: 0; width: 5px; height: 0; }
+    .pro-img-wrap > span:nth-child(3) { bottom: 0; right: 0; height: 5px; width: 0; }
+    .pro-img-wrap > span:nth-child(4) { bottom: 0; left: 0; width: 5px; height: 0; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(1) { width: 100%; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(2) { height: 100%; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(3) { width: 100%; }
+    .product-items:hover > .pro-img-wrap > span:nth-child(4) { height: 100%; }
     
     /* ----- #cont5-wrap ----- */
     #cont5-wrap { background: #eee; }
@@ -1935,4 +1973,5 @@
 
     /* ----- #cont3-wrap ----- */
     #earbuds-img, #micro-img, #headphone-img { top: -25%; }
+    .best-product-title { font-size: 1.8rem; }
 }

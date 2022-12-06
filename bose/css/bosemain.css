@@ -15,6 +15,7 @@ color
     #cont1-list, #cont3-wrap-bg,
     #cont4-wrap, #bose-icon-wrap {
         width: 90%;
+        max-width: 1700px;
         margin: 0 auto;
         /* background: yellowgreen; */
     }
@@ -688,6 +689,7 @@ color
     .product-items:nth-child(even):hover > .pro-img-wrap > span:nth-child(2) { transition-delay: 600ms; }
     .product-items:nth-child(even):hover > .pro-img-wrap > span:nth-child(3) { transition-delay: 0s; }
     .product-items:nth-child(even):hover > .pro-img-wrap > span:nth-child(4) { transition-delay: 200ms; }
+
 
     .m-pro-txt { display: none; }
 

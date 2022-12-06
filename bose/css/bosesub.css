@@ -38,6 +38,7 @@ color
     /* ----- #amarG ----- */
     #amarG {
         width: 90%;
+        max-width: 1700px;
         margin: 0 auto;
         height: 100%;
         position: relative;
@@ -46,8 +47,7 @@ color
     #amarG-txt {
         position: absolute;
         left: 0;
-        top: 50%;
-        /* letter-spacing: 0.1rem; */
+        top: 48%;
         z-index: 5;
     }
     #amarG-txt > h1 {
@@ -56,7 +56,7 @@ color
         line-height: 6.5rem;
         animation: amarG 10s infinite;
     }
-    #amarG-txt > h1 > span { color: #f5f3f4; text-shadow: -1px 1px 1px rgba(25, 25, 25, 0.5);}
+    #amarG-txt > h1 > span { color: #f5f3f4; }
     #amarG-txt > p {
         font-size: 2rem;
         line-height: 2.5rem;
@@ -359,20 +359,26 @@ color
     #side-privacy > li:hover > a { color: #fb8500; }
 
     /* ----- #amarG ----- */
-    #amarG-txt { padding: 20% 0 10%;}
+    #amarG { position: relative; }
+    #amarG-txt {
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        color: #f5f3f4;
+    }
     #amarG-txt > h1 {
-        font-size: 4rem;
+        font-size: 4.5rem;
         font-weight: 700;
-        line-height: 4.5rem;
+        line-height: 5.5rem;
         animation: amarG 10s infinite;
     }
     #amarG-txt > p {
-        font-size: 2.5rem;
-        line-height: 3rem;
-        margin: 1.5rem 0;
+        font-size: 2.8rem;
+        line-height: 4rem;
+        margin: 2.5rem 0;
     }
     #amarG-txt > span {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         font-weight: 700;
     }
 
@@ -465,8 +471,6 @@ color
     }
     .history-txt > p {
         font-size: 1.8rem;
-        word-break: keep-all;
-        text-align: justify;
         line-height: 3rem;
         margin-top: 2.5rem;
     }
@@ -700,20 +704,26 @@ color
     #side-privacy > li:hover > a { color: #fb8500; }
 
     /* ----- #amarG ----- */
-    #amarG-txt { padding: 20% 0 10%;}
+    #amarG { position: relative; }
+    #amarG-txt {
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        color: #f5f3f4;
+    }
     #amarG-txt > h1 {
-        font-size: 3rem;
+        font-size: 3.3rem;
         font-weight: 700;
-        line-height: 3.5rem;
+        line-height: 4rem;
         animation: amarG 10s infinite;
     }
     #amarG-txt > p {
-        font-size: 1.8rem;
-        line-height: 2rem;
+        font-size: 2rem;
+        line-height: 3rem;
         margin: 1.5rem 0;
     }
     #amarG-txt > span {
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 700;
     }
 
@@ -805,8 +815,6 @@ color
     }
     .history-txt > p {
         font-size: 1.3rem;
-        /* word-break: keep-all; */
-        text-align: justify;
         line-height: 2rem;
         margin-top: 2.5rem;
     }
@@ -1035,7 +1043,13 @@ color
     #side-privacy > li:hover > a { color: #fb8500; }
 
     /* ----- #amarG ----- */
-    #amarG-txt { padding: 25% 0 10%;}
+    #amarG { position: relative; }
+    #amarG-txt {
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        color: #f5f3f4;
+    }
     #amarG-txt > h1 {
         font-size: 2rem;
         font-weight: 700;
@@ -1061,7 +1075,7 @@ color
     #bosePower {
         /* height: 100%; */
         overflow: hidden;
-        margin: 50% auto 50%;
+        margin: 40% auto 40%;
     }
     #btn-wrap { position: relative; }
     #bosePower-list { width: 200%; }
@@ -1106,7 +1120,7 @@ color
         background-image: url("../images/sub_content002_bg_soundwave.png");
         background-repeat: no-repeat;
         background-position: 48% 35rem;
-        background-size: 10rem;
+        background-size: 10rem 60%;
     }
     #history-wrap > h2 {
         color: #fb8500;
@@ -1129,14 +1143,12 @@ color
 
     .history-txt > h6 { font-size: 2rem; font-weight: 700; }
     .history-txt > h6 > span {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 700;
         margin-right: 3%;
     }
     .history-txt > p {
         font-size: 1.3rem;
-        /* word-break: keep-all; */
-        text-align: justify;
         line-height: 2rem;
         margin-top: 2.5rem;
     }
@@ -1262,4 +1274,27 @@ color
         0%,100% { letter-spacing: 0; }
         50% { letter-spacing: 0.05rem; }
     }
+}
+
+@media screen and (max-width: 479px) {
+    .bosePower-txt > h2 { font-size: 2.3rem; line-height: 3rem; }
+    .bosePower-txt > p { font-size: 1.3rem; line-height: 2rem; }
+
+    #history-wrap > h2 { font-size: 4rem; }
+
+    .history-img { display: none; }
+    .history-txt > h6 { font-size: 1.6rem; }
+    .history-txt > h6 > span { font-size: 2rem; }
+
+    /* 사이사이 이미지 띄울 공간 */
+    #since1956 { margin-bottom: 150%; }
+    #since1987 { margin-bottom: 150%; }
+    #since1972 { margin-bottom: 150%; }
+    #since2000 { margin-bottom: 150%; }
+    /* 년도와 년도 사이 공간 */
+    #since1986,
+    #since2013,
+    #since1964,
+    #since1993,
+    #since2020 { margin-bottom: 50%; }
 }

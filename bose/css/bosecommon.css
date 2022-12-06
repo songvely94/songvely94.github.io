@@ -33,6 +33,7 @@ color
 
     #header-wrap, #black-header, #nav {
         width: 90%;
+        max-width: 1700px;
         margin: 0 auto;
         /* background: yellowgreen; */
     }
