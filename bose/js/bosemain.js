@@ -371,15 +371,11 @@ $(function () {
             MtouchStart = e.originalEvent.touches[0].pageX;
             Mtouch = true;
   
+
         })
 
         $bestList.on("touchmove", function (e) {
             if(Mtouch == true) {
-                // $bestItems.css("transform", "translateX(" + (e.originalEvent.touches[0].pageX - mouseStart) + "px)")
-                if( e.originalEvent.touches[0].pageX- MtouchStart > 0) {
-                    $bestItems.prepend( $bestItems.children(":last") ).css("margin-left", "-90%");
-                }
-
                 $bestItems.css("margin-left", (e.originalEvent.touches[0].pageX - MtouchStart) + "px");
             }
         })
@@ -397,111 +393,6 @@ $(function () {
         })
 
     }
-
-    /*
-    var timerId = window.setInterval (rightSlide, interval);
-
-    $bestList.hover (
-        function () { mouseEnter() },
-        function () { mouseLeave() }
-    );
-
-    $bestPrevBtn.on("click", function (e) {
-        e.preventDefault();
-        if ( windowWidth >= 1200 ) leftSlide();
-    }).hover (
-        function () { mouseEnter() },
-        function () { mouseLeave() }
-    );
-    $bestNextBtn.on("click", function (e) {
-        e.preventDefault();
-        if ( windowWidth >= 1200 ) rightSlide();
-    }).hover (
-        function () { mouseEnter() },
-        function () { mouseLeave() }
-    );
-
-    var TtouchStart = 0;
-    var Ttouch = false;
-    
-    var TtimerId = window.setInterval (rightSlide, interval);
-
-    $bestList.on("touchstart", function (e) {
-        if ( windowWidth >= 768 && windowWidth <= 1199) {
-            window.clearInterval( TtimerId );
-
-            TtouchStart = e.originalEvent.touches[0].pageX;
-            Ttouch = true;
-        }
-    })
-
-    $bestList.on("touchmove", function (e) {
-        if ( windowWidth >= 768 && windowWidth <= 1199) {
-            if(Ttouch == true) {
-                
-                if( e.originalEvent.changedTouches[0].pageX - TtouchStart > 10) {
-                    leftSlide();
-                }
-                
-                $bestItems.css("margin-left", (e.originalEvent.touches[0].pageX - TtouchStart) + "px");
-            }
-        }
-    })
-
-    $bestList.on("touchend", function (e) {
-        if ( windowWidth >= 768 && windowWidth <= 1199) {
-            Ttouch = false;
-            if( e.originalEvent.changedTouches[0].pageX - TtouchStart < -10) {
-                // $bestItems.css("margin-left", "-90%");
-                rightSlide();
-            }
-        }
-    })
-
-    
-    var MtouchStart = 0;
-    var Mtouch = false;
-
-    // var $indi = $("<div><div></div></div>").addClass("indi").appendTo($cont3Wrap);
-
-    var MtiemrId = window.setInterval (MobileRight, interval);
-
-    $bestList.on("touchstart", function (e) {
-        window.clearInterval( MtiemrId );
-        
-        if ( windowWidth <= 767 ) {
-            MtouchStart = e.originalEvent.touches[0].pageX;
-            Mtouch = true;
-        }
-
-    })
-
-    $bestList.on("touchmove", function (e) {
-        if(Mtouch == true) {
-            if ( windowWidth <= 767 ) {
-                // $bestItems.css("transform", "translateX(" + (e.originalEvent.touches[0].pageX - mouseStart) + "px)")
-                if( e.originalEvent.touches[0].pageX- MtouchStart > 0) {
-                    $bestItems.prepend( $bestItems.children(":last") ).css("margin-left", "-90%");
-                }
-
-                $bestItems.css("margin-left", (e.originalEvent.touches[0].pageX - MtouchStart) + "px");
-            }
-        }
-    })
-
-    $bestList.on("touchend", function (e) {
-        Mtouch = false;
-        if ( windowWidth <= 767 ) {
-            if( e.originalEvent.changedTouches[0].pageX - MtouchStart < -10) {
-                // $bestItems.css("margin-left", "-90%");
-                MobileRight();
-            } else if( e.originalEvent.changedTouches[0].pageX - MtouchStart > 10) {
-                MobileLeft();
-            }
-        }
-    })
-    */
-
 
     // ----- function --------------------------------------------------------
     // 이미지 슬라이드에서 사용하는 함수
