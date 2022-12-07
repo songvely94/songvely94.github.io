@@ -5,7 +5,6 @@ $(function () {
     // 1.2. .history-img는 opacity가 0에서 1로 변하여라
     var $window = $(window);
     var windowWidth = $window.width();
-    var windowHeight = $window.height();
     var $hisTxt = $(".history-txt");
     var $histImg = $(".history-img");
 
@@ -126,7 +125,7 @@ $(function () {
 
     $window.on("resize", function () {
         windowWidth = $window.width();
-        windowHeight = $window.height();
+        
         amarImgPosi = $("#amarG-img").offset().left;
         amarSpanPosi = $("#amarSpan").offset().left;
         amarTxtPosi = amarImgPosi - amarSpanPosi;
