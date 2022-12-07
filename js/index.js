@@ -43,11 +43,6 @@ $(function () {
     var $boseFont = $("#cont4_wrap > .inner_wrap > .bose_font");
     var $boseMock = $("#bose_mockup");
     
-    var $lawnBefore = $("#lawn_before");
-    var $lawnAfter = $("#lawn_after");
-    var $lawnFont = $("#cont6_wrap > .inner_wrap > .lawn_font");
-    var $lawnMock = $("#lawn_mockup");
-    
     var $armyBefore = $("#army_before");
     var $armyAfter = $("#army_after");
     var $armyFont = $("#cont8_wrap > .inner_wrap > .army_font");

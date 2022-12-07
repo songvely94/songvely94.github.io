@@ -19,7 +19,7 @@ $(function () {
 
     var $proImgWrap = $(".pro-img-wrap");
 
-    // ----- roding ----------------------------------------------------------
+    // ----- loding ----------------------------------------------------------
     // 1. #cont2-wrap의 margin-top 값을 윈도우 너비 + 뷰포트의 높이 만큼 준다.
     $cont1Wrap.css({ marginTop: windowWidth + windowHeight });
 
@@ -36,7 +36,7 @@ $(function () {
     var speakerBottom = speakerTop + $speaker.outerHeight();
     var skateTop = $("#skate-w").offset().top;
 
-    // ----- roding ----------------------------------------------------------
+    // ----- loding ----------------------------------------------------------
     // 2. .pro-img-wrap의 첫번째 자식으로 <span> 요소를 4개 넣어준다.
     $("<span></span><span></span><span></span><span></span>").prependTo($proImgWrap);
 

@@ -35,7 +35,7 @@ $(function () {
         });
     });
 
-    // ----- road event ----------------------------------------------------
+    // ----- load event ----------------------------------------------------
     var amarImgPosi = $("#amarG-img").offset().left;
     var amarSpanPosi = $("#amarSpan").offset().left;
     var amarTxtPosi = amarImgPosi - amarSpanPosi;
@@ -125,9 +125,24 @@ $(function () {
 
     $window.on("resize", function () {
         windowWidth = $window.width();
-        
+
         amarImgPosi = $("#amarG-img").offset().left;
         amarSpanPosi = $("#amarSpan").offset().left;
         amarTxtPosi = amarImgPosi - amarSpanPosi;
+
+        if ( windowWidth >= 1200 ) {
+            $("#amarG-txt").css({left: amarTxtPosi});
+            
+            if( amarTxtPosi < 0 || amarSpanPosi < 100 ) {
+                $("#amarG-txt").css({left: 0}).children("h1").css({
+                    fontSize: "5rem",
+                    lineHeight: "6rem",
+                    textShadow: "1px 1px 1px rgba(245, 243, 244, 0.7)"
+                }).children("span").css({
+                    color: "#191919",
+                    textShadow: "1px 1px 1px rgba(245, 243, 244, 0.7)"
+                });
+            }
+        }
     });
 });
