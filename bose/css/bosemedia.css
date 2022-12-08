@@ -324,7 +324,7 @@
     #best-list { margin-top: 5%; width: 100%; }
     #best-list-wrap { overflow: hidden; }
     
-    #best-items { width: 133.33%; }
+    #best-items { width: 200%; margin-left: -50%; }
     
     .best-box {
         float: left;
@@ -340,7 +340,6 @@
         box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
         position: relative;
-        /* padding: 12.8rem 6.2rem 0; */
         padding: 30% 10% 10%;
         margin: 25% 0 1%;
         box-sizing: border-box;
@@ -357,47 +356,47 @@
         position: absolute;
         top: -15%; left: 50%;
         transform: translateX(-50%);
-        width: 180px;
-        /* border: 1px solid yellowgreen; */
+        width: 250px;
     }
     
     .best-product-img > img:not(:first-child) { display: none; }
     
     #earbuds-img {
         position: absolute;
-        top: -25%; left: 50%;
+        top: -30%; left: 50%;
     }
     
     #micro-img {
         position: absolute;
-        top: -25%; left: 50%;
-        width: 50%;
+        top: -30%; left: 50%;
+        width: 190px;
     }
     
     #headphone-img {
         position: absolute;
-        top: -25%; left: 50%;
-        width: 40%;
+        top: -30%; left: 50%;
+        width: 140px;
     }
     
     .best-product-img > img {
         width: 100%;
         display: block;
     }
-    
+
     .best-product-title {
-        font-size: 2.2rem;
+        font-size: 3rem;
         font-weight: 700;
-        line-height: 2.8rem;
+        line-height: 4rem;
     }
     
     .best-float {
-        padding-top: 3rem;
+        padding-top: 10%;
     }
+    .color-btn-wrap { float: left; }
     .price {
-        font-size: 1.6rem;
+        float: right;
+        font-size: 2.3rem;
         font-weight: 700;
-        padding-top: 1.5rem;
     }
     
     .color-btn {
@@ -977,7 +976,7 @@
     #best-list { margin-top: 5%; width: 100%; }
     #best-list-wrap { overflow: hidden; }
     
-    #best-items { width: 133.33%; }
+    #best-items { width: 200%; margin-left: -50%; }
     
     .best-box {
         float: left;
@@ -993,7 +992,6 @@
         box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
         position: relative;
-        /* padding: 12.8rem 6.2rem 0; */
         padding: 30% 10% 10%;
         margin: 25% 0 1%;
         box-sizing: border-box;
@@ -1010,7 +1008,7 @@
         position: absolute;
         top: -15%; left: 50%;
         transform: translateX(-50%);
-        width: 150px;
+        width: 200px;
         /* border: 1px solid yellowgreen; */
     }
     
@@ -1018,19 +1016,19 @@
     
     #earbuds-img {
         position: absolute;
-        top: -20%; left: 50%;
+        top: -30%; left: 50%;
     }
     
     #micro-img {
         position: absolute;
-        top: -20%; left: 50%;
-        width: 50%;
+        top: -30%; left: 50%;
+        width: 150px;
     }
     
     #headphone-img {
         position: absolute;
-        top: -20%; left: 50%;
-        width: 40%;
+        top: -30%; left: 50%;
+        width: 120px;
     }
     
     .best-product-img > img {
@@ -1624,7 +1622,8 @@
     #best-list { margin-top: 5%; width: 100%; }
     #best-list-wrap { overflow: hidden; }
     
-    #best-items { width: 400%; }
+    /* #best-items { width: 400%; } */
+    #best-items { width: 400%; margin-left: -95%; }
     
     .best-box {
         float: left;
@@ -1640,7 +1639,6 @@
         box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
         position: relative;
-        /* padding: 12.8rem 6.2rem 0; */
         padding: 30% 10% 10%;
         margin: 25% 0 1%;
         box-sizing: border-box;
@@ -1657,27 +1655,26 @@
         position: absolute;
         top: -15%; left: 50%;
         transform: translateX(-50%);
-        width: 150px;
-        /* border: 1px solid yellowgreen; */
+        width: 200px;
     }
     
     .best-product-img > img:not(:first-child) { display: none; }
     
     #earbuds-img {
         position: absolute;
-        top: -35%; left: 50%;
+        top: -28%; left: 50%;
     }
     
     #micro-img {
         position: absolute;
-        top: -35%; left: 50%;
-        width: 45%;
+        top: -28%; left: 50%;
+        width: 150px;
     }
     
     #headphone-img {
         position: absolute;
-        top: -35%; left: 50%;
-        width: 35%;
+        top: -28%; left: 50%;
+        width: 120px;
     }
     
     .best-product-img > img {
@@ -1686,19 +1683,15 @@
     }
     
     .best-product-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         font-weight: 700;
         line-height: 2.8rem;
     }
     
-    .best-float {
-        padding-top: 1.6rem;
-    }
     .color-btn-wrap {
-        float: left;
+        padding: 15% 0 10%;
     }
     .price {
-        float: right;
         font-size: 1.6rem;
         font-weight: 700;
     }
@@ -1972,6 +1965,11 @@
     .main-txt { font-size: 6rem; }
 
     /* ----- #cont3-wrap ----- */
-    #earbuds-img, #micro-img, #headphone-img { top: -25%; }
+    #earbuds-img, #micro-img, #headphone-img { top: -20%; }
+    .best-product-img { width: 150px; }
+    #earbuds-img { width: 140px; }
+    #micro-img { width: 105px; }
+    #headphone-img { width: 80px; }
+
     .best-product-title { font-size: 1.8rem; }
 }

@@ -443,7 +443,7 @@ color
         position: absolute;
         top: -15%; left: 50%;
         transform: translateX(-50%);
-        width: 60%;
+        width: 230px;
         /* border: 1px solid yellowgreen; */
     }
 
@@ -452,18 +452,19 @@ color
     #earbuds-img {
         position: absolute;
         top: -35%; left: 50%;
+        width: 220px;
     }
 
     #micro-img {
         position: absolute;
         top: -35%; left: 50%;
-        width: 45%;
+        width: 180px;
     }
 
     #headphone-img {
         position: absolute;
         top: -35%; left: 50%;
-        width: 35%;
+        width: 130px;
     }
 
     .best-product-img > img {

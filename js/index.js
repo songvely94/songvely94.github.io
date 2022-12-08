@@ -27,7 +27,6 @@ $(function () {
     var $intro = $("#intro");
     var $jimin = $("#jimin");
     var $portBose = $("#port_bose");
-    var $portLawn = $("#port_lawn");
     var $portArmy = $("#port_army");
     var $epilogue = $("#epilogue");
 

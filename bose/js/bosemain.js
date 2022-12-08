@@ -212,13 +212,15 @@ $(function () {
             
             // 2. 뷰포트의 화면의 상단이 #cont1-wrap의 offset().top에 도달했을 때 메뉴바 변경
             if ( scrollTop >= cont1Top - $header.height()/2 && scrollTop <= $cont3Wrap.offset().top) {
+                $header.css({ background: "transparent" });
                 $("#colorLogo").children(":last").hide().siblings().show();
                 $("#ham-menu").css("background-image", "url(" + "images/menu-ham-w.png" + ")")
             } else {
+                $header.removeAttr("style");
                 $("#colorLogo").children().removeAttr("style");
                 $("#ham-menu").removeAttr("style");
             };
-            
+
             // 3. #cont1-wrap의 offset.top 값에 도달하면 이미지들 움직임.
             if ( scrollTop >= cont1Top && bottomWindow <= MmoveEnd ) {
                 var imgStartTop = scrollTop - cont1Top;
@@ -326,8 +328,8 @@ $(function () {
     } else if ( windowWidth >= 768 && windowWidth <= 1199) {
         var TtouchStart = 0;
         var Ttouch = false;
-        
-        var TtimerId = window.setInterval (rightSlide, interval);
+
+        var TtimerId = window.setInterval (TrightSlide, interval);
 
         $bestList.on("touchstart", function (e) {
             window.clearInterval( TtimerId );
@@ -337,31 +339,27 @@ $(function () {
         })
 
         $bestList.on("touchmove", function (e) {
-            if(Ttouch == true) {
-                
-                if( e.originalEvent.changedTouches[0].pageX - TtouchStart > 10) {
-                    leftSlide();
-                }
-                
-                $bestItems.css("margin-left", (e.originalEvent.touches[0].pageX - TtouchStart) + "px");
+            if(Ttouch == true) {                
+                $bestItems.css("transform", "translateX(" + (e.originalEvent.touches[0].pageX - TtouchStart) + "px)");
             }
         })
 
         $bestList.on("touchend", function (e) {
             Ttouch = false;
             if( e.originalEvent.changedTouches[0].pageX - TtouchStart < -10) {
-                // $bestItems.css("margin-left", "-90%");
-                rightSlide();
+                TrightSlide();
+            } else if( e.originalEvent.changedTouches[0].pageX - TtouchStart > 10) {
+                TleftSlide();
             }
+            
+            $bestItems.removeAttr("style");
 
-            TtimerId = window.setInterval (rightSlide, interval);
+            TtimerId = window.setInterval (TrightSlide, interval);
         })
 
     } else if ( windowWidth <= 767 ) {
         var MtouchStart = 0;
         var Mtouch = false;
-
-        // var $indi = $("<div><div></div></div>").addClass("indi").appendTo($cont3Wrap);
 
         var MtiemrId = window.setInterval (MobileRight, interval);
 
@@ -370,24 +368,23 @@ $(function () {
 
             MtouchStart = e.originalEvent.touches[0].pageX;
             Mtouch = true;
-  
-
         })
 
         $bestList.on("touchmove", function (e) {
             if(Mtouch == true) {
-                $bestItems.css("margin-left", (e.originalEvent.touches[0].pageX - MtouchStart) + "px");
+                $bestItems.css("transform", "translateX(" + (e.originalEvent.touches[0].pageX - MtouchStart) + "px)");
             }
         })
 
         $bestList.on("touchend", function (e) {
             Mtouch = false;
             if( e.originalEvent.changedTouches[0].pageX - MtouchStart < -10) {
-                // $bestItems.css("margin-left", "-90%");
                 MobileRight();
             } else if( e.originalEvent.changedTouches[0].pageX - MtouchStart > 10) {
                 MobileLeft();
             }
+            
+            $bestItems.removeAttr("style");
 
             MtiemrId = window.setInterval (MobileRight, interval);
         })
@@ -409,13 +406,26 @@ $(function () {
         });
     }
 
+    function TleftSlide () {
+        $bestItems.prepend( $bestItems.children(":last") )
+            .css("margin-left", "-100%").animate({"margin-left": "-50%"});
+    }
+
+    function TrightSlide () {
+        $bestItems.animate({
+            "margin-left": "-100%"
+        }, function () {
+            $(this).removeAttr("style").children(":first").appendTo($(this));
+        });
+    }
+
     function MobileLeft () {
         $bestItems.prepend( $bestItems.children(":last") )
-            .css("margin-left", "-90%").animate({"margin-left": "0"});
+            .css("margin-left", "-185%").animate({"margin-left": "-95%"});
     }
     function MobileRight () {
         $bestItems.animate({
-            "margin-left": "-90%"
+            "margin-left": "-185%"
         }, function () {
             $(this).removeAttr("style").children(":first").appendTo($(this));
         });
