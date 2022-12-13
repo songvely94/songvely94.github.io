@@ -16,9 +16,7 @@ a {
     display: block;
 }
 
-html, body {
-    height: 100%;
-}
+html, body { height: 100%; }
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
@@ -33,7 +31,7 @@ body {
     font-family: 'Six Caps', sans-serif;
     position: fixed;
     /* left: 1600px; */
-    left: 90%;
+    right: 5%;
     /* right: 220px; */
     top: 50%;
     transform: translateY(-50%);
@@ -142,13 +140,12 @@ body {
 
     /* main icon */
 #rotate_song {
-    width: 1700px;
-    height: 1700px;
+    width: 100%;
 
     position: absolute;
     /* left: -300px;
     top: 400px; */
-    left: -15%;
+    left: -18%;
     top: 40%;
 
     animation: rotatemove 100s infinite linear;
@@ -159,34 +156,41 @@ body {
 #red_star > img,
 #yellow_star > img,
 #blue_star > img,
-#roket > img {
-    width: 100%;
-    display: block;
-}
+#roket > img { width: 100%; display: block; }
 
 #planet {
     width: 195px;
+    /* width: 10%; */
 
     position: absolute;
-    /* right: 310px; top: 95px; */
     right: 15%; top: 10%;
 
     cursor: pointer;
-    /* cursor: url("../images/click_cursor.png") 60 60, auto; */
 
     animation: planetmove 2s infinite ease-in-out;
     animation-play-state: running;
 }
 
-#planet:hover {
-    animation-play-state: paused;
+#planet > p {
+    position: absolute;
+    right: -15%;
+    color: #fffffb;
+    font-size: 1em;
+    transform: rotate(10deg);
 }
+#planet > p:nth-of-type(2) {
+    top: 110%;
+    right: 0;
+    transform: rotate(40deg);
+}
+
+#planet:hover { animation-play-state: paused; }
 
 #red_star {
     width: 150px;
+    /* width: 8%; */
 
     position: absolute;
-    /* left: 360px; top: 65px; */
     left: 18%; top: 5%;
 
     animation: redmove 5s infinite ease-in-out;
@@ -194,9 +198,9 @@ body {
 
 #yellow_star {
     width: 120px;
+    /* width: 6%; */
 
     position: absolute;
-    /* right: 965px; bottom: 5px; */
     right: 50%; bottom: 2%;
 
     animation: yellowmove 5s infinite ease-in-out;
@@ -204,9 +208,9 @@ body {
 
 #blue_star {
     width: 140px;
+    /* width: 7%; */
 
     position: absolute;
-    /* right: 170px; bottom: 170px; */
     right: 10%; bottom: 20%;
 
     animation: roketmove 5s infinite ease-in-out;
@@ -214,25 +218,17 @@ body {
 
 #roket {
     width: 130px;
+    /* width: 6%; */
 
     position: absolute;
-    /* left: 190px; bottom: 70px; */
     left: 10%; bottom: 10%;
 
     animation: roketmove 5s infinite ease-in-out;
 }
 
-#roket > img {
-    transform: rotate(15deg);
-}
-
-.starmove {
-    animation: starmove 1s ease-out;
-}
-
-.flying {
-    animation: flying 1500ms ease-in;
-}
+#roket > img { transform: rotate(15deg); }
+.starmove { animation: starmove 1s ease-out; }
+.flying { animation: flying 1500ms ease-in; }
 
 /* ----- keyframes ----------------------------------- */
 @keyframes planetmove{
@@ -280,8 +276,10 @@ body {
     to { letter-spacing: -2px;}
 }
 
-/* ----- media ----------------------------------- */
-@media screen and (max-width: 1536px) {
+@media screen and (max-width: 1550px) {
+    #nav{right: 3%;}
+}
+/* @media screen and (max-width: 1536px) {
     #nav {top: 10%; transform: translateY(0);}
 
     #rotate_song { width: 1500px; height: 1500px; }
@@ -332,26 +330,4 @@ body {
 
     #rotate_song { width: 700px; height: 700px;}
 
-}
-
-/*
-/*pc (해상도 1024px)
-@media screen and (min-width: 1024px) {
-    
-}
-
-/* 태블릿 가로 세로 (해상도 768px ~ 1023px)
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    #nav {
-        position: fixed;
-        left: 1000px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
-
-/* 모바일 가로 세로 (해상도 480px ~ 767px)
-@media screen and (min-width: 480px) and (max-width: 767px) {
-    
-}
-*/
+} */

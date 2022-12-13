@@ -8,6 +8,7 @@ $(function () {
     // 휠 이벤트 page scrolling 에서 사용할 요소 미리 참조
     var $window = $(window);
     var $html = $("html, body");
+    var windowWidth = $window.width();
     var pageIndex = Math.round($window.scrollTop() / $window.height());
     var lastPageIndex = $(".page").length - 1;
     
@@ -119,7 +120,7 @@ $(function () {
     // 2.1 원하는 pageIndex에 도달하면 폰트와 아이콘 색 변화
     
     window.addEventListener("wheel", function (event) {
-        event.preventDefault();
+            event.preventDefault();
     }, { passive: false });
     
     window.addEventListener("wheel", function (event) {
@@ -471,7 +472,8 @@ $(function () {
         }).children().css({
             "visibility": "visible",
             "opacity": "1",
-            "transition-duration": "400ms"
+            "transition-duration": "400ms",
+            "transition-delay": "600ms"
         });
     };
 
