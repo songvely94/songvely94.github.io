@@ -13,42 +13,42 @@ $(function () {
     var lastPageIndex = $(".page").length - 1;
     
     // 휠 이벤트 section1 에서 사용할 요소 미리 참조
-    var $innerCircle = $("#inner_circle");
+    var $innerCircle = $("#inner-c");
 
     // 휠 이벤트 section2 에서 사용할 요소 미리 참조
-    var $songRightCont = $(".song_right_cont");
+    var $songRightCont = $(".songRight-cont");
 
     var contIndex = 0;
     var lastContIndex = $songRightCont.length-1;
     
     // 휠 이벤트 navigation 에서 사용할 요소 미리 참조
     var $nav = $("#nav > ul > li >  a");
-    var $navIcon = $(".menu_icon");
+    var $navIcon = $(".menu-icon");
 
     var $intro = $("#intro");
     var $jimin = $("#jimin");
-    var $portBose = $("#port_bose");
-    var $portArmy = $("#port_army");
+    var $portBose = $("#port-bose");
+    var $portArmy = $("#port-army");
     var $epilogue = $("#epilogue");
 
     // 스크롤 이벤트 section2 스크롤 시 사용할 요소 미리 참조
-    var $rightCont1 = $("#right_cont1");
-    var $cont2wrap = $("#cont2_wrap")
+    var $rightCont1 = $("#right-cont1");
+    var $cont2wrap = $("#cont2-wrap")
     
     
     // 스크롤 이벤트 section3 스크롤 시 사용할 요소 미리 참조
     // 클릭 이벤트 section3 before 이미지 클릭 시 사용할 요소 미리 참조
-    var $boseBefore = $("#bose_before");
-    var $boseAfter = $("#bose_after");
-    var $boseFont = $("#cont4_wrap > .inner_wrap > .bose_font");
-    var $boseMock = $("#bose_mockup");
+    var $beforeBose = $("#beforeBose");
+    var $afterBose = $("#afterBose");
+    var $boseFont = $("#cont4-wrap > .inner-wrap > .bose-font");
+    var $boseMock = $("#bose-mockup");
     
-    var $armyBefore = $("#army_before");
-    var $armyAfter = $("#army_after");
-    var $armyFont = $("#cont8_wrap > .inner_wrap > .army_font");
-    var $armyMock = $("#army_mockup");
+    var $beforeArmy = $("#beforeArmy");
+    var $afterArmy = $("#afterArmy");
+    var $armyFont = $("#cont6-wrap > .inner-wrap > .army-font");
+    var $armyMock = $("#army-mockup");
 
-    var $shootingFont = $(".shootingfont");
+    var $dropFont = $(".dropFont");
     
     var $mockup = $(".mockup");
 
@@ -58,15 +58,13 @@ $(function () {
     var $shootingStar = $(".shootingstar");
 
     // 클릭 이벤트 section4 font 클릭 시 사용할 요소 미리 참조
-    var $beforeFont = $("#big_font");
-    var $afterFont = $("#after_font");
-    var $clickBefore = $("#click_before");
-    var $clickAfter = $("#click_after");
+    var $beforeFont = $("#big-font");
+    var $afterFont = $("#after-font");
+    var $beforeClick = $("#beforeClick");
+    var $afterClick = $("#afterClick");
 
     // svg 효과에 사용할 요소 미리 참조
-    var $svg90 = $(".svg90");
-    var $svg80 = $(".svg80");
-    var $svg70 = $(".svg70");
+    var $fillSvg = $(".fill_svg");
     var fillinterval = 1000;
     var svginterval;
     
@@ -88,7 +86,7 @@ $(function () {
 
     // video
     var $video = $("#video");
-    var $introVideo = $("#intro_video");
+    var $introVideo = $("#intro-video");
 
     // console.log("pageIndex = " + pageIndex);
     $html.animate({ scrollTop: pageIndex * $window.height() }, 10);
@@ -151,7 +149,7 @@ $(function () {
     // 1. 스크롤링 후 section3-content2 글자가 바로 떨어지는 효과 (콜백함수)
     // 1.1. section3-content2 글자가 바로 떨어진 후 목업이 나타난다.
     
-    $window.on("scroll", function () {
+    $window.on("scroll", function (event) {
         // ---- section 1 --------------------------------------------------------
         if(pageIndex == 1) {
             circleScaleUp();
@@ -169,26 +167,18 @@ $(function () {
         else if ( pageIndex == 5 ) { addFont($armyFont, $armyMock); }
         else { removeFont(); };  
         
-        // if (pageIndex == 2 ) {
-        //     $boseBefore.addClass("bounce_on");
-        //     $lawnBefore.addClass("bounce_on");
-        // } else if (pageIndex == 4) {
-        //     $lawnBefore.addClass("bounce_on");
-        //     $boseBefore.removeClass("bounce_on");
-
-        // }
         if (pageIndex == 2) {
-            beforeImg ($boseBefore, $armyBefore);
+            beforeImg ($beforeBose, $beforeArmy);
         } else if (pageIndex == 4){
-            beforeImg ($armyBefore, $boseBefore);
+            beforeImg ($beforeArmy, $beforeBose);
         } else {
-            $(".before_effect").removeClass("bounce_on");
+            $(".before-effect").removeClass("bounce");
         }
         
         // ---- section 4 --------------------------------------------------------
         if(pageIndex != 5) {
-            $clickBefore.show();
-            $clickAfter.hide();
+            $beforeClick.show();
+            $afterClick.hide();
             $introVideo.hide(function () {
                 $video.hide();
             });
@@ -269,13 +259,13 @@ $(function () {
     // 2. before 사진 클릭 이벤트 발생하면
     // 2.1 after 사진이 보여지고
     // 2.2 자동 페이지 스크롤링 ( 함수 사용 )
-    $boseBefore.on("click", function () {
-        beforeClick ( $boseBefore, $boseAfter, 3, $boseFont, $boseMock );
+    $beforeBose.on("click", function () {
+        beforeClick ( $beforeBose, $afterBose, 3, $boseFont, $boseMock );
         pageIndex++;
     });
     
-    $armyBefore.on("click", function () {
-        beforeClick ( $armyBefore, $armyAfter, 5, $armyFont, $armyMock );
+    $beforeArmy.on("click", function () {
+        beforeClick ( $beforeArmy, $afterArmy, 5, $armyFont, $armyMock );
         pageIndex++;
     });
 
@@ -285,21 +275,21 @@ $(function () {
     // 2 에필로그 페이지 클릭 이벤트 발생하면
     // 2.1 퍼블리셔 송지민 페이지 보이기.
     $beforeFont.on("click", function () {
-        $clickBefore.fadeOut();
-        $clickAfter.fadeIn();
+        $beforeClick.fadeOut();
+        $afterClick.fadeIn();
     });
     
     $afterFont.on("click", function () {
-        $clickBefore.fadeIn();
-        $clickAfter.fadeOut();
+        $beforeClick.fadeIn();
+        $afterClick.fadeOut();
     });
 
     // section2 파도치는 글자
     window.setInterval(function () {
-        $("#song_title > p > span").each(function (index) {
+        $("#up-title > p > span").each(function (index) {
             $(this).delay(index * 100).animate({top: "-5px"}, 200).animate({top: 0}, 200);
         });
-    }, 4000);
+    }, 3000);
 
     // 소개 동영상 클릭 시 소개 동영상 재생
     $("#resume").children(":last").on("click", function (event) {
@@ -316,7 +306,30 @@ $(function () {
         });
     })
 
+    
+    if ( windowWidth <= 1199 ) {
+        var touchStart = 0;
+        var isTouch = false;
 
+        $window.on("touchstart", function (e) {
+            touchStart = e.originalEvent.touches[0].pageY;
+            isTouch = true;
+
+            console.log("start = " + pageIndex)
+        })
+        $window.on("touchend", function (e) {
+            isTouch = false;
+            if( e.originalEvent.changedTouches[0].pageY - touchStart < 0) {
+                pageDown();
+                console.log("down = yes")
+            } else if( e.originalEvent.changedTouches[0].pageY - touchStart > 0) {
+                pageUp();
+                console.log("up = yes")
+            }
+            console.log("end = " + pageIndex)
+            return;
+        })
+    }
 
 
     // ---- function --------------------------------------------------------
@@ -361,24 +374,24 @@ $(function () {
     // rightContMove
     function rightContMove() {
         if (contIndex >=0 && contIndex <= 4) {
-            indicatorMove (contIndex);
+            $indicator.children().removeClass("indi-on").eq(contIndex).addClass("indi-on");
         } else {
-            indicatorMove (0);
+            $indicator.children().removeClass("indi-on").eq(0).addClass("indi-on");
         }
 
         if (contIndex >= 0 && contIndex <= 3 ) {
-            contSliding();
+            $songRightCont.filter(".rightCont-show").removeClass("rightCont-show");
+            $songRightCont.eq(contIndex).addClass("rightCont-show");
 
-            removeSvg();
+            $fillSvg.removeAttr("style");
 
         } else if (contIndex == 4) {
-            contSliding();
+            $songRightCont.filter(".rightCont-show").removeClass("rightCont-show");
+            $songRightCont.eq(contIndex).addClass("rightCont-show");
 
-            $(".third_column > span").each(function () {
+            $("#right-cont5 > ul > li > span").each(function () {
                 var number = Number.parseInt($(this).text());
                 svginterval = Math.round((fillinterval * number) / 70);
-        
-                console.log("number = " + number);
 
                 $(this).parent().children(":first").children().children(".svg90").delay(200).animate({
                     strokeDashoffset: "50"
@@ -395,9 +408,9 @@ $(function () {
 
             
         } else {
-            $songRightCont.filter(".right_cont_show").removeClass("right_cont_show");
+            $songRightCont.filter(".rightCont-show").removeClass("rightCont-show");
 
-            removeSvg();
+            $fillSvg.removeAttr("style");
         };
     };
 
@@ -445,13 +458,13 @@ $(function () {
         };
 
         function removeNav ( $item ) {
-            $nav.removeClass("nav_on").children().removeClass("icon_on");
-            $item.addClass("nav_on").children().addClass("icon_on");
+            $nav.removeClass("nav-on").children().removeClass("icon-on");
+            $item.addClass("nav-on").children().addClass("icon-on");
         };
 
     };
 
-    // section1 inner_circle 스케일 up 효과 함수
+    // section1 inner_circle 스케일 up 효과 함수 - xxxx
     function circleScaleUp () {
         $innerCircle.css({
             "transform": "scale(10)",
@@ -463,7 +476,7 @@ $(function () {
         });
     };
     
-    // section1 inner_circle 스케일 down 효과 함수
+    // section1 inner_circle 스케일 down 효과 함수 - xxx
     function circleScaleDown () {
         $innerCircle.css({
             "transform": "scale(1)",
@@ -482,11 +495,11 @@ $(function () {
         if (pageIndex == 1) {
             // 400ms 뒤에 section2 - right 하양 배경 들어오는 애니메이션 추가
             window.setTimeout(function () {
-                $cont2wrap.addClass("section2_show");
+                $cont2wrap.addClass("cont2-show");
 
-                $rightCont1.addClass("cont_delay").addClass("right_cont_show");
+                $rightCont1.addClass("cont-delay").addClass("rightCont-show");
                 window.setTimeout(function () {
-                    $rightCont1.removeClass("cont_delay");
+                    $rightCont1.removeClass("cont-delay");
                 }, 1000);
 
                 // 비동기 시 사용
@@ -498,36 +511,23 @@ $(function () {
 
         } else if (pageIndex != 1) {
             window.setTimeout(function () {
-                $cont2wrap.removeClass("section2_show");
-                $rightCont1.removeClass("right_cont_show");
+                $cont2wrap.removeClass("cont2-show");
+                $rightCont1.removeClass("rightCont-show");
             }, 400);
         };
     };
 
-    // section2 오른쪽 글자 슬라이딩 효과 함수
-    function contSliding () {
-        $songRightCont.filter(".right_cont_show").removeClass("right_cont_show");
-        $songRightCont.eq(contIndex).addClass("right_cont_show");
-    };
-
-    // svg 제거
-    function removeSvg () {
-        $svg90.removeAttr("style");
-        $svg80.removeAttr("style");
-        $svg70.removeAttr("style");
-    };
-
     // section3 before 이미지 뛰는 효과
     function beforeImg ($before1, $before2) {
-        $before1.addClass("bounce_on");
-        $before2.removeClass("bounce_on");
+        $before1.addClass("bounce");
+        $before2.removeClass("bounce");
     }
 
     // cont4, 6, 8 글씨가 떨어지는 효과 함수
     function addFont ($font, $mock) {
         window.setTimeout(function () {
             // 800ms초 후 fontmove 추가해라
-            $font.addClass("fontmove");
+            $font.addClass("drop");
 
             // 움직임이 끝나면 목업이 나타나라.
             window.setTimeout(function () {
@@ -536,10 +536,10 @@ $(function () {
         }, 300);
     };
 
-    // cont4, 6, 8 글씨가 떨어지는 효과 후 제거 함수
+    // cont4, 6, 8 글씨가 떨어지는 효과 후 제거 함수 - xxx
     function removeFont () {
         window.setTimeout(function () {
-            $shootingFont.removeClass("fontmove");
+            $dropFont.removeClass("drop");
             $mockup.removeClass("mockupmove");
         }, 200);
     };
@@ -582,11 +582,6 @@ $(function () {
     function navclick (navindex) {
         pageScrolling(navindex);
         pageIndex = navindex;
-    };
-
-    // indicator 돌아가는 효과 함수
-    function indicatorMove (indiindex) {
-        $indicator.children().removeClass("indi_on").eq(indiindex).addClass("indi_on");
     };
 
 });
