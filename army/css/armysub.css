@@ -268,7 +268,3 @@ th, tr {
     color: #024d71;
     font-weight: 700;
 }
-
-@media screen and (max-width: 1200px) {
-    #first-line, #mainmenu, #submenu, #content-wrap { width: 100%; }
-}
