@@ -228,6 +228,8 @@ $(function () {
                 navclick (navindex + 1);
             } else if (navindex == 4) {
                 navclick (navindex + 2);
+            } else if (navindex == 5) {
+                navclick (navindex + 3);
             };
         });
     });
