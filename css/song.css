@@ -515,12 +515,6 @@
         right: -50%;
     }
 
-    #arrowBose, #arrowArmy,
-    #arrowBefore, #arrowAfter { animation: arrow 1s infinite ease-out; }
-
-    #cont4-wrap > .inner-wrap > .bose-font,
-    #cont6-wrap > .inner-wrap > .army-font { padding-top: 8%; }
-
     .wrap-left, .wrap-right { float: left; }
     .wrap-left { text-align: center; width: 60%; }
     .wrap-right { width: 40%; }
@@ -645,22 +639,66 @@
     #army-menus.menu-btn > li { border: 3px solid #0d7acf; }
     #army-menus.menu-btn > li::before { background: #0d7acf; }
 
-    #cont4-wrap > .inner-wrap > .bose-font.drop,
-    #cont6-wrap > .inner-wrap > .army-font.drop {
-        visibility: visible;
-        opacity: 1;
+    /* ----- uss 001 ----- */
+    #cont7-wrap {
+        background: #191919;
         
-        animation: dropFont 100ms ease-out;
+        overflow: hidden;
     }
 
+    .uss-font {
+        font-family: 'Raleway', sans-serif;
+        font-size: 8rem;
+        font-weight: 700;
+        color: #191919;
+    }
+
+    #cont7-wrap > .inner-wrap > .uss-font::before {
+        content: "";
+        width: 100px;
+        height: 100%;
+        background: url("../images/uss_smalluss.png") no-repeat;
+        background-size: contain;
+        top: -100px;
+        position: absolute;
+        display: inline-block;
+    }
+
+    #beforeUss,
+    #afterUss {
+        width: 230px;
+        position: absolute;
+        left: 50%;
+        bottom: -1px;
+        transform: translateX(-50%);
+
+        cursor: pointer;
+    }
+
+    #beforeUss > img,
+    #afterUss > img { width: 100%; display: block; }
+
+    #arrowUss {
+        position: absolute;
+        top: 15%;
+        left: -120%;
+    }
+
+    /* uss 002 */
+    #uss-menus.menu-btn > li { border: 3px solid #191919; }
+    #uss-menus.menu-btn > li::before { background: #191919; }
+
+    /* 공통 */
     #afterBose,
-    #afterArmy { 
+    #afterArmy,
+    #afterUss { 
         visibility: hidden;
         opacity: 0;
     }
 
     #beforeBose.imghide,
-    #beforeArmy.imghide {
+    #beforeArmy.imghide,
+    #beforeUss.imghide {
         visibility: hidden;
         opacity: 0;
         transition-duration: 200ms;
@@ -668,7 +706,8 @@
     }
 
     #afterBose.imgshow,
-    #afterArmy.imgshow {
+    #afterArmy.imgshow,
+    #afterUss.imgshow {
         visibility: visible;
         opacity: 1;
         transition-duration: 200ms;
@@ -676,10 +715,25 @@
     }
 
     #cont4-wrap > .inner-wrap > .bose-font,
-    #cont6-wrap > .inner-wrap > .army-font {
+    #cont6-wrap > .inner-wrap > .army-font,
+    #cont8-wrap > .inner-wrap > .uss-font {
+        padding-top: 8%;
+
         visibility: hidden;
         opacity: 0;
     }
+
+    #cont4-wrap > .inner-wrap > .bose-font.drop,
+    #cont6-wrap > .inner-wrap > .army-font.drop,
+    #cont8-wrap > .inner-wrap > .uss-font.drop {
+        visibility: visible;
+        opacity: 1;
+        
+        animation: dropFont 100ms ease-out;
+    }
+
+    #arrowBose, #arrowArmy, #arrowUss,
+    #arrowBefore, #arrowAfter { animation: arrow 1s infinite ease-out; }
 
     /* ----- epilogue - front ----- */
     #beforeClick  { 

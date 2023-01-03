@@ -1,0 +1,41 @@
+#fragTxt > p > span { font-family: 'Noto Sans KR', sans-serif; }
+
+#cont {
+    width: 95%;
+    margin: 0 auto;
+    padding: 15rem 0 2rem;
+}
+
+#fragTxt { margin-bottom: 5rem; }
+#fragTxt > h2 { font-size: 1.8rem; font-weight: 700; }
+#fragTxt > p {
+    font-size: 1.6rem;
+    line-height: 1.3em;
+    padding-top: 1.3rem;
+}
+
+#fragList > ul { width: 100%; }
+#fragList > ul > li {
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+}
+
+.fragImg > a > img { width: 100%; display: block; }
+
+.fragImg > a > img:nth-child(2) { display: none; }
+
+#fragList > ul > li:hover > div > a > img:nth-child(1) { display: none; }
+#fragList > ul > li:hover > div > a > img:nth-child(2) { display: block; }
+
+#fragList > ul > li > p { font-size: 1.6rem; margin: 5rem 0 10rem; }
+#fragList > ul > li:hover > p { text-decoration: underline; }
+
+#downTxt { margin-top: 15rem; }
+#downTxt > ul > li {
+    float: left;
+    font-size: 1.6rem;
+    width: 10%;
+}
+
+.underLine { text-decoration: underline; }

@@ -1,0 +1,63 @@
+#cont2Txt > h2 > span,
+#cont2Txt > p > span { font-family: 'Noto Sans KR', sans-serif; }
+
+.page {
+    height: 100%;
+    position: relative;
+}
+
+/* ----- cont1 ----- */
+#cont1Img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#cont1Img > img { width: 100%; display: block; }
+
+/* ----- cont2 ----- */
+#cont2Txt {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+#cont2Txt > h2 { font-size: 4rem; font-weight: 700; }
+#cont2Txt > h2 > span {
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding-left: 1.5rem;
+}
+
+#cont2Txt > p { 
+    font-size: 1.6rem;
+    line-height: 1.5em;
+
+    margin-top: 1em;
+}
+#cont2Txt > p:nth-of-type(2) { font-weight: 700; }
+
+#cont2Img {
+    width: 500px;
+
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+}
+#cont2Img > img { width: 100%; display: block; }
+
+/* ----- cont3-5 ----- */
+.contLeft, .contRight {
+    float: left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.contLeft > img, .contRight > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

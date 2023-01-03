@@ -1,0 +1,95 @@
+.noto { font-family: 'Noto Sans KR', sans-serif; }
+.underLine > a {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+/* #slideImg { width: 50%; margin: 0 auto;} */
+#slideImg > ul > li > img { width: 50%; display: block; margin: auto; }
+
+#content { position: relative; }
+
+#contLeft, #contRight {
+    width: 30%;
+    background: #fafafa;
+    padding-top: 15rem;
+}
+#contLeft {
+    position: fixed;
+    top: 0; bottom: 0; left: 0;
+}
+#contRight {
+    position: fixed;
+    top: 0; bottom: 0; right: 0;
+}
+
+#contLeft > ul,
+#contRight > div {
+    width: 85%;
+    margin: 0 auto;
+}
+
+#contLeft > ul > li {
+    font-size: 1.3rem;
+    line-height: 1.3em;
+}
+#contLeft > ul > li:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+#EkkyEx > h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5em;
+}
+#EkkyEx > p {
+    font-size: 1.3rem;
+    line-height: 1.5em;
+}
+#EkkyEx > p:nth-of-type(1) {
+    padding: 2rem 0;
+}
+
+#price { padding: 5rem 0;}
+#price > p { font-size: 1.8rem; font-weight: 500; }
+
+#priceCount { padding-top: 2rem; }
+#count {
+    font-size: 1.6rem;
+    width: 20px;
+    margin-right: 1rem;}
+button {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+button:nth-of-type(1) { margin-right: 0.8rem; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#all {
+    font-size: 1.3rem;
+    border-top: 1.5px solid #999;
+    border-bottom: 1.5px solid #ccc;
+    padding: 1.5rem 0;
+    margin: 2rem 0 5rem;
+}
+
+#buy { margin-bottom: 1.5rem; }
+input[type="submit"] {
+    width: 100%;
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 3.5rem;
+    border: 1.5px solid #999;
+    background-color: transparent;
+    cursor: pointer;
+}

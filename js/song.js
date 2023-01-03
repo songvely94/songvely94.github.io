@@ -29,6 +29,7 @@ $(function () {
     var $jimin = $("#jimin");
     var $portBose = $("#port-bose");
     var $portArmy = $("#port-army");
+    var $portUss = $("#port-uss");
     var $epilogue = $("#epilogue");
 
     // 스크롤 이벤트 section2 스크롤 시 사용할 요소 미리 참조
@@ -47,6 +48,11 @@ $(function () {
     var $afterArmy = $("#afterArmy");
     var $armyFont = $("#cont6-wrap > .inner-wrap > .army-font");
     var $armyMock = $("#army-mockup");
+
+    var $beforeUss = $("#beforeUss");
+    var $afterUss = $("#afterUss");
+    var $ussFont = $("#cont8-wrap > .inner-wrap > .uss-font");
+    var $ussMock = $("#uss-mockup");
 
     var $dropFont = $(".dropFont");
     
@@ -165,12 +171,15 @@ $(function () {
         // ---- section 3 --------------------------------------------------------
         if (pageIndex == 3) { addFont($boseFont, $boseMock); }
         else if ( pageIndex == 5 ) { addFont($armyFont, $armyMock); }
-        else { removeFont(); };  
+        else if ( pageIndex == 7 ) { addFont($ussFont, $ussMock); }
+        else { removeFont(); }
         
         if (pageIndex == 2) {
-            beforeImg ($beforeBose, $beforeArmy);
-        } else if (pageIndex == 4){
-            beforeImg ($beforeArmy, $beforeBose);
+            beforeImg ($beforeBose, $beforeArmy, $beforeUss);
+        } else if (pageIndex == 4) {
+            beforeImg ($beforeArmy, $beforeUss, $beforeBose);
+        } else if (pageIndex == 6) {
+            beforeImg ($beforeUss, $beforeBose, $beforeArmy);
         } else {
             $(".before-effect").removeClass("bounce");
         }
@@ -266,6 +275,11 @@ $(function () {
     
     $beforeArmy.on("click", function () {
         beforeClick ( $beforeArmy, $afterArmy, 5, $armyFont, $armyMock );
+        pageIndex++;
+    });
+
+    $beforeUss.on("click", function () {
+        beforeClick ( $beforeUss, $afterUss, 7, $ussFont, $ussMock );
         pageIndex++;
     });
 
@@ -433,7 +447,7 @@ $(function () {
     // if ( $window.scrollTop() == $window.height() * 1 || $window.scrollTop() == $window.height() * 3 || $window.scrollTop() == $window.height() * 5 || $window.scrollTop() == $window.height() * 7 || $window.scrollTop() == $window.height() * 8 )
     // if ( $html.scrollTop() == $window.height() * 1 || $html.scrollTop() == $window.height() * 3 || $html.scrollTop() == $window.height() * 5 || $html.scrollTop() == $window.height() * 7 || $html.scrollTop() == $window.height() * 8 )
     function navScrolling () {
-        if ( pageIndex == 1 || pageIndex == 3 || pageIndex == 5 || pageIndex == 6 ) {
+        if ( pageIndex == 1 || pageIndex == 3 || pageIndex == 5 || pageIndex == 7 || pageIndex == 8 ) {
             $nav.addClass("navdark");
             $navIcon.addClass("icondark");
         } else {
@@ -445,8 +459,10 @@ $(function () {
 
     // navigation 원하는 pageIndex에 도달하면 폰트와 아이콘 색 변화 함수
     function navPoint () {
-        if ( pageIndex == 6 ) {
+        if ( pageIndex == 8 ) {
             removeNav ( $epilogue );
+        } else if ( pageIndex >= 6 ) {
+            removeNav ( $portUss );
         } else if ( pageIndex >= 4 ) {
             removeNav ( $portArmy );
         } else if ( pageIndex >= 2 ) {
@@ -518,9 +534,10 @@ $(function () {
     };
 
     // section3 before 이미지 뛰는 효과
-    function beforeImg ($before1, $before2) {
+    function beforeImg ($before1, $before2, $before3) {
         $before1.addClass("bounce");
         $before2.removeClass("bounce");
+        $before3.removeClass("bounce");
     }
 
     // cont4, 6, 8 글씨가 떨어지는 효과 함수
